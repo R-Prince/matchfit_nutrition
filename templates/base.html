@@ -13,7 +13,7 @@
         <!--Navbar-->
         <nav>
             <div class="nav-wrapper black">
-            <a href="{{ url_for('get_recipes' )}}" class="brand-logo nav-logo">MATCH<span>FIT</span> NUTRITION</a>
+            <a href="{{ url_for('get_recipes' )}}" class="brand-logo nav-logo">MATCH<span class="fit-logo">FIT</span> <span class="nutrition-logo">NUTRITION</span></a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="{{ url_for('get_recipes' )}}">Home</a></li>
@@ -45,20 +45,20 @@
     {% endblock %}
 
    <!--Footer-->
-    <footer class="page-footer light-green accent-3">
+    <footer class="page-footer black">
         <div class="container">
             <div class="row">
               <div class="col l6 s12">
-                <h5 class="white-text">MatchFit Nutrition</h5>
-                <p class="grey-text text-lighten-4">Fueling your perfromance with delicious recipes and advice</p>
+                <h5 class="footer-header white-text">MatchFit Nutrition</h5>
+                <p class="footer-text grey-text text-lighten-4">Fueling your perfromance with delicious recipes and advice</p>
               </div>
               <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Social Media</h5>
+                <h5 class="footer-header white-text">Social Media</h5>
                 <ul>
-                  <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/">Facebook</a></li>
-                  <li><a class="grey-text text-lighten-3" href="https://twitter.com/?lang=en-gb">Twitter</a></li>
-                  <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/">Instagram</a></li>
-                  <li><a class="grey-text text-lighten-3" href="https://www.pinterest.co.uk/">Pinterest</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://twitter.com/?lang=en-gb" target="_blank">Twitter</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://www.pinterest.co.uk/" target="_blank">Pinterest</a></li>
                 </ul>
               </div>
             </div>
