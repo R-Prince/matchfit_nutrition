@@ -1,4 +1,23 @@
-/* WEBSITE FONTS */
+/* Website Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Display&display=swap');
 
+/* Navbar */
+.nav-logo{
+    font-family: 'Big Shoulders Inline Display', cursive;
+    letter-spacing: 5px;
+    margin-left: 10px;
+}
 
+.nav-logo span{
+    color:#0DFF2D;
+}
+
+/* Side Navbar */
+.side-nav-logo{
+    font-family: 'Big Shoulders Inline Display', cursive;
+    letter-spacing: 5px;
+}
+
+.side-nav-logo span{
+    color:#0DFF2D;
+}
