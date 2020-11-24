@@ -1,6 +1,23 @@
 /* Website Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Display&family=Big+Shoulders+Stencil+Display&family=Oswald:wght@300&display=swap');
 
+/* Website Headers */
+.page-header{
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    letter-spacing: 5px;
+    margin: 40px 0px;
+}
+
+.hero-header span{
+    color:#0DFF2D;
+}
+
+.hero-header{
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    letter-spacing: 5px;
+    color: white;
+}
+
 /* Navbar */
 .nav-logo{
     font-family: 'Big Shoulders Stencil Display', cursive;
@@ -48,17 +65,11 @@ nav ul li{
     ),
     url(https://images.unsplash.com/reserve/EnF7DhHROS8OMEp2pCkx_Dufer%20food%20overhead%20hig%20res.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=1514&q=80) no-repeat center center fixed;
     background-size: cover;
-    height: 80vh;
+    height: 95vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-}
-
-.page-header{
-    font-family: 'Big Shoulders Stencil Display', cursive;
-    letter-spacing: 5px;
-    color: white;
 }
 
 .hero-text{
@@ -67,13 +78,41 @@ nav ul li{
     letter-spacing: 5px;
 }
 
-.page-header span{
-    color:#0DFF2D;
-}
-
-.hero-button{
+.green-button{
     background-color:#64dd17;
     font-family: 'Oswald', sans-serif;
+    letter-spacing: 5px;
+}
+
+/* Feature Section - Home Page */
+.feature-container{
+    padding: 50px 0px;
+    background-color: #212121;
+}
+
+.feature{
+    margin: 25px 0px;
+    color: white;
+}
+
+.feature-icon{
+    font-size: 50px;
+    color: white;
+}
+
+.feature-header{
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    letter-spacing: 5px;
+    color: white;
+}
+
+.feature-text{
+    color: white;
+}
+
+/* Latest Recipe - Home Page */
+.recipe-header{
+    font-family: 'Big Shoulders Inline Display', cursive;
     letter-spacing: 5px;
 }
 

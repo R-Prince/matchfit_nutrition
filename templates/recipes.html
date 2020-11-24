@@ -2,15 +2,56 @@
 {% block content %}
     <!--Hero Section-->
     <div class="hero-section">
-        <h1 class="center-align page-header">MATCH<span>FIT</span> NUTRITION</h1>
+        <h1 class="center-align hero-header">MATCH<span>FIT</span> NUTRITION</h1>
         <p class="center-align hero-text">FIND THE BEST RECIPES TO FUEL YOUR PERFORMANCE</p>
-        <a class="hero-button waves-effect waves-light btn-large">View Recipes</a>
+        <a class="green-button waves-effect waves-light btn-large">View Recipes</a>
     </div>
 
-    {% for recipe in recipes %}
-        {{ recipe.recipe_name }}<br>
-        {{ recipe.recipe_description }}<br>
-        {{ recipe.recipe_time }}<br>
-        {{ recipe.recipe_difficulty }}
-    {% endfor %}
+    <!--Features Section-->
+    <div class="row feature-container">
+        <div class="col s12 m4 center-align feature">
+            <i class="fas fa-battery-three-quarters feature-icon"></i>
+            <h5 class="feature-header">Fuel your Performance</h5>
+            <p class="feature-text">Fuel your performance with delicious recipes from fellow athletes from around the world.</p>
+            <a class="waves-effect waves-light btn green-button">View Recipes</a>
+        </div>
+        <div class="col s12 m4 center-align feature">
+            <i class="fas fa-utensils feature-icon"></i>
+            <h5 class="feature-header">Share, edit and delete recipes</h5>
+            <p class="feature-text">Registered users can share their favourite recipes with the community.</p>
+            <a class="waves-effect waves-light btn green-button">Register</a>
+        </div>
+        <div class="col s12 m4 center-align feature">
+            <i class="fas fa-graduation-cap feature-icon"></i>
+            <h5 class="feature-header">Top tips from Sport Nutritionists</h5>
+            <p class="feature-text">Weekly articles and recipes from some of the best sport nutritionists in the world.</p>
+            <a class="waves-effect waves-light btn green-button">View Articles</a>
+        </div>
+    </div>
+    <!--Latest Recipes-->
+    <h3 class="center-align page-header">Latest Recipes</h3>
+    <div class="container">
+        {% for recipe in recipes %}
+            <div class="col s12 m7">
+                <div class="card horizontal">
+                    <div class="card-image s12 m4 responsive-img">
+                        <img src="{{ recipe.recipe_image }}">
+                    </div>
+                    <div class="card-stacked s12 m7">
+                        <div class="card-content">
+                            <h5 class="header recipe-header">{{ recipe.recipe_name }}</h5>
+                            <p>{{ recipe.recipe_description }}</p>
+                            <ul>
+                                <li> Duration: {{ recipe.recipe_time }}</li>
+                                <li>Difficulty: {{ recipe.recipe_difficulty }}</li>
+                            </ul>
+                        </div>
+                        <div class="card-action">
+                            <a class="waves-effect waves-light btn green-button">View Recipe</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}    
+    </div>
 {% endblock %}
