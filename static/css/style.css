@@ -56,6 +56,14 @@ nav ul li{
     letter-spacing: 3px;
 }
 
+/*Flash Messages */
+.flash-message{
+    background-color: #212121;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 3px;
+}
+
 /* Hero Section - Home Page */
 .hero-section{
     background: 
