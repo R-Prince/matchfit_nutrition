@@ -48,7 +48,7 @@ nav ul li{
 }
 
 .side-nav-logo span{
-    color:#0DFF2D;
+    color:#76ff03;
 }
 
 .sidenav a{
@@ -62,6 +62,10 @@ nav ul li{
     color: white;
     font-family: 'Oswald', sans-serif;
     letter-spacing: 3px;
+}
+
+.account-link{
+    color: #76ff03;
 }
 
 /* Hero Section - Home Page */
