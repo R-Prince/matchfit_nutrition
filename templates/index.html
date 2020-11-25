@@ -4,7 +4,7 @@
     <div class="hero-section">
         <h1 class="center-align hero-header">MATCH<span>FIT</span> NUTRITION</h1>
         <p class="center-align hero-text">FIND THE BEST RECIPES TO FUEL YOUR PERFORMANCE</p>
-        <a class="green-button waves-effect waves-light btn-large">View Recipes</a>
+        <a href="{{ url_for('recipes' )}}" class="green-button waves-effect waves-light btn-large">View Recipes</a>
     </div>
 
     <!--Features Section-->
@@ -13,7 +13,7 @@
             <i class="fas fa-battery-three-quarters feature-icon"></i>
             <h5 class="feature-header flow-text">Fuel your Performance</h5>
             <p class="feature-text">Fuel your performance with delicious recipes from fellow athletes from around the world.</p>
-            <a class="waves-effect waves-light btn green-button">View Recipes</a>
+            <a href="{{ url_for('recipes' )}}" class="waves-effect waves-light btn green-button">View Recipes</a>
         </div>
         <div class="col s12 m4 center-align feature">
             <i class="fas fa-utensils feature-icon"></i>

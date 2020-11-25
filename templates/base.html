@@ -20,12 +20,13 @@
                 <li><a href="{{ url_for('recipes' )}}">Recipes</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Blogs</a></li>
-                <li><a href="{{ url_for('login' )}}">Log In</a></li>
-                <li><a href="{{ url_for('register' )}}">Register</a></li>
                 {% if session.user %}
-                <li><a href="#">Add Recipe</a></li>
+                <li><a href="{{ url_for('add_recipe')}}">Add Recipe</a></li>
                 <li><a href="{{ url_for( 'profile', username=session['user'] )}}">Profile</a></li>
                 <li><a href="{{ url_for('logout')}}">Log Out</a></li>
+                {% else %}
+                <li><a href="{{ url_for('login' )}}">Log In</a></li>
+                <li><a href="{{ url_for('register' )}}">Register</a></li>
                 {% endif %}
             </ul>
             </div>
@@ -37,12 +38,13 @@
             <li><a href="{{ url_for('recipes' )}}">Recipes</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Blogs</a></li>
-            <li><a href="{{ url_for('login' )}}">Log In</a></li>
-            <li><a href="{{ url_for('register' )}}">Register</a></li>
             {% if session.user %}
-            <li><a href="#">Add Recipe</a></li>
+            <li><a href="{{ url_for('add_recipe')}}">Add Recipe</a></li>
             <li><a href="{{ url_for( 'profile', username=session['user'] )}}">Profile</a></li>
             <li><a href="{{ url_for('logout')}}">Log Out</a></li>
+            {% else %}
+            <li><a href="{{ url_for('login' )}}">Log In</a></li>
+            <li><a href="{{ url_for('register' )}}">Register</a></li>
             {% endif %}
         </ul>
     </header>
@@ -90,7 +92,7 @@
               </div>
             </div>
           </div>
-          <div class="footer-copyright">
+          <div class="footer-copyright footer-text">
             <div class="container">
             © 2020 MatchFit Nutrition
             </div>
