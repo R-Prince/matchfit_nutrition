@@ -9,7 +9,7 @@
 }
 
 .hero-header span{
-    color:#0DFF2D;
+    color:#76ff03;
 }
 
 .hero-header{
@@ -56,7 +56,7 @@ nav ul li{
     letter-spacing: 3px;
 }
 
-/*Flash Messages */
+/* Flash Messages */
 .flash-message{
     background-color: #212121;
     color: white;
@@ -91,7 +91,7 @@ nav ul li{
 }
 
 .green-button{
-    background-color:#64dd17;
+    background-color:#76ff03;
     font-family: 'Oswald', sans-serif;
     letter-spacing: 5px;
 }
@@ -142,4 +142,20 @@ nav ul li{
 footer a{
     font-family: 'Oswald', sans-serif;
     letter-spacing: 3px;
+}
+
+/* Profile Page */
+.profile-info{
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 3px;
+    font-size: 1.5rem;
+}
+
+.profile-details{
+    margin-top: 5px;
+}
+
+.profile-icon{
+    color: #76ff03;
+    font-size: 2rem;
 }
