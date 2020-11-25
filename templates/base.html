@@ -13,11 +13,11 @@
         <!--Navbar-->
         <nav>
             <div class="nav-wrapper black">
-            <a href="{{ url_for('get_recipes' )}}" class="brand-logo nav-logo">MATCH<span class="fit-logo">FIT</span> <span class="nutrition-logo">NUTRITION</span></a>
+            <a href="{{ url_for('home' )}}" class="brand-logo nav-logo">MATCH<span class="fit-logo">FIT</span> <span class="nutrition-logo">NUTRITION</span></a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="{{ url_for('get_recipes' )}}">Home</a></li>
-                <li><a href="#">Recipes</a></li>
+                <li><a href="{{ url_for('home' )}}">Home</a></li>
+                <li><a href="{{ url_for('recipes' )}}">Recipes</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Blogs</a></li>
                 <li><a href="{{ url_for('login' )}}">Log In</a></li>
@@ -33,8 +33,8 @@
         <!--Mobile Sidenav-->
         <ul class="sidenav" id="mobile-demo">
             <h4 class="center-align side-nav-logo">MATCH<span>FIT</span><br>NUTRITION</h4>
-            <li><a href="{{ url_for('get_recipes' )}}">Home</a></li>
-            <li><a href="#">Recipes</a></li>
+            <li><a href="{{ url_for('home' )}}">Home</a></li>
+            <li><a href="{{ url_for('recipes' )}}">Recipes</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Blogs</a></li>
             <li><a href="{{ url_for('login' )}}">Log In</a></li>

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+    <!--Recipes-->
+    <h3 class="center-align page-header">Recipes</h3>
+    <div class="container">
+        {% for recipe in recipes %}
+            <div class="col s12 m7">
+                <div class="card horizontal">
+                    <div class="card-image s12 m4 responsive-img">
+                        <img src="{{ recipe.recipe_image }}">
+                    </div>
+                    <div class="card-stacked s12 m7">
+                        <div class="card-content">
+                            <h5 class="header recipe-header">{{ recipe.recipe_name }}</h5>
+                            <p>{{ recipe.recipe_description }}</p>
+                            <ul>
+                                <li> Duration: {{ recipe.recipe_time }}</li>
+                                <li>Difficulty: {{ recipe.recipe_difficulty }}</li>
+                            </ul>
+                        </div>
+                        <div class="card-action">
+                            <a class="waves-effect waves-light btn green-button">View Recipe</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}    
+    </div>
+{% endblock %}
