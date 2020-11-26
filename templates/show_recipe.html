@@ -15,12 +15,16 @@
             </ul>
         </div>
         <div class="row">
-            <div class="col s12 m4">
-                <h5>Ingredients</h5>
-                <p>{{recipe.recipe_ingredients}}</p>
+            <div class="col s12 m4 recipe-ingredients recipe-box">
+                <h5 class="recipe-title">Ingredients</h5>
+                <ul>
+                    {% for item in ingredient %}
+                        <li class="ingredient">{{-item-}}</li>
+                    {% endfor %}
+                </ul>
             </div>
-            <div class="col s12 m8">
-                <h5>Method</h5>
+            <div class="col s12 m8 recipe-method recipe-box">
+                <h5 class="recipe-title center-align">Method</h5>
                 <p>{{recipe.recipe_method}}</p>
             </div>
         </div>

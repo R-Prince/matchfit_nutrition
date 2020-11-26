@@ -1,4 +1,4 @@
-import os
+import os, re
 from flask import (
     Flask, flash, render_template,
     redirect, session, url_for,
@@ -154,7 +154,10 @@ def delete_recipe(recipe_id):
 @app.route("/show_recipe/<recipe_id>")
 def show_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    return render_template("show_recipe.html", recipe=recipe)
+    ingredients = recipe["recipe_ingredients"]
+    ingredient = re.split(', |and', ingredients)
+    return render_template(
+        "show_recipe.html", recipe=recipe, ingredient=ingredient)
 
 
 if __name__ == "__main__":

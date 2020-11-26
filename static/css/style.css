@@ -173,3 +173,37 @@ footer a{
     color: #76ff03;
     font-size: 2rem;
 }
+
+/* Show Recipe Page */
+
+
+.recipe-ingredients{
+    background-color: #212121;
+    color: white;
+    border: 3px solid #76ff03;
+}
+
+.recipe-method{
+    background-color: #f2f2f2;
+    border: 3px solid #212121;
+}
+
+.recipe-title{
+    font-family: 'Big Shoulders Inline Display', cursive;
+    letter-spacing: 5px;
+}
+
+.recipe-box{
+    height: 75vh;
+}
+
+.ingredient{
+    margin: 5px 0px;
+}
+
+/* Smaller container for recipe box on smaller screens */
+@media screen and (max-width: 600px) {
+  .recipe-box {
+    height: auto;
+  }
+}
