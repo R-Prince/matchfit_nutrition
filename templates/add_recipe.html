@@ -27,13 +27,13 @@
                         </div>
                         <!--Recipe difficulty-->
                         <div class="input-field col s6">
-                            <select required>
-                                <option value="" disabled>Select Difficulty</option>
+                            <select id="recipe_difficulty" name="recipe_difficulty" class="validate" required>
+                                <option value="" disabled selected>Select Difficulty</option>
                                 <option value="easy">Easy</option>
                                 <option value="moderate">Moderate</option>
                                 <option value="difficult">Difficult</option>
                             </select>
-                            <label>Recipe Difficulty</label>
+                            <label for="recipe_difficulty">Recipe Difficulty</label>
                         </div>
                     </div>
                     <div class="row">
@@ -52,7 +52,7 @@
                     </div>
                     <div class="row">
                         <!--Recipe Image-->
-                        <div class="input-field col s12">
+                        <div class="input-field col s6">
                             <input id="recipe_image" type="text" name="recipe_image" class="validate">
                             <label for="recipe_image">Add Image Link</label>
                         </div>

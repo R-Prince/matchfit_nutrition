@@ -43,7 +43,7 @@
                             <p>{{ recipe.recipe_description }}</p>
                             <ul>
                                 <li> Duration: {{ recipe.recipe_time }}</li>
-                                <li>Difficulty: {{ recipe.recipe_difficulty }}</li>
+                                <li>Difficulty: {{ recipe.recipe_difficulty.title() }}</li>
                             </ul>
                         </div>
                         <div class="card-action">
