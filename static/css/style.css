@@ -18,6 +18,19 @@
     color: white;
 }
 
+/* Website Buttons */
+.green-button{
+    background-color:#76ff03;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 5px;
+}
+
+.grey-button{
+    background-color: #212121;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 3px;
+}
+
 /* Navbar */
 .nav-logo{
     font-family: 'Big Shoulders Stencil Display', cursive;
@@ -86,12 +99,6 @@ nav ul li{
 
 .hero-text{
     color: white;
-    font-family: 'Oswald', sans-serif;
-    letter-spacing: 5px;
-}
-
-.green-button{
-    background-color:#76ff03;
     font-family: 'Oswald', sans-serif;
     letter-spacing: 5px;
 }
