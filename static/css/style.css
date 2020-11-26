@@ -31,6 +31,13 @@
     letter-spacing: 3px;
 }
 
+.red-button{
+    background-color: #d32f2f;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 3px;
+    margin: 0 2px;
+}
+
 /* Navbar */
 .nav-logo{
     font-family: 'Big Shoulders Stencil Display', cursive;
