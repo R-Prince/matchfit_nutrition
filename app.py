@@ -138,7 +138,7 @@ def edit_recipe(recipe_id):
             "recipe_image": request.form.get("recipe_image"),
             "created_by": session['user']
         }
-        mongo.db.recipes.update(update_recipe)
+        mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, update_recipe)
         flash("Recipe Successfully Updated")
         return redirect(url_for("recipes"))
     return render_template("edit_recipe.html", recipe=recipe)

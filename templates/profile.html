@@ -12,7 +12,10 @@
                             <p class="profile-details">First Name: {{username.first_name.title()}}<br>
                             Last Name: {{username.last_name.title()}}
                             </p>
+                            <div class="row">
                             <a class="waves-effect waves-light btn green-button" href="{{ url_for('logout')}}">LogOut</a>
+                            <a class="waves-effect waves-light btn grey-button" href="{{ url_for('add_recipe')}}">Add Recipe</a>
+                            </div>
                         </li>
                     </ul>
                 </div>
