@@ -47,7 +47,7 @@
                             </ul>
                         </div>
                         <div class="card-action">
-                            <a class="waves-effect waves-light btn green-button">View Recipe</a>
+                            <a href="{{ url_for('show_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn green-button">View Recipe</a>
                         </div>
                     </div>
                 </div>
