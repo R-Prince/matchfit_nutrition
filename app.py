@@ -83,9 +83,11 @@ def login():
 def profile(username):
     username = mongo.db.users.find_one(
         {"username": session['user']})
+    recipes = list(mongo.db.recipes.find())
     # Redirect user to profile page
     if session["user"]:
-        return render_template("profile.html", username=username)
+        return render_template(
+            "profile.html", username=username, recipes=recipes)
     else:
         return redirect(url_for("login"))
 
