@@ -16,6 +16,7 @@
                 </div>
             </div>
         </form>
+        {% if recipes|length > 0 %}
         {% for recipe in recipes %}
             <div class="col s12 m7">
                 <div class="card horizontal">
@@ -42,6 +43,15 @@
                     </div>
                 </div>
             </div>
-        {% endfor %}    
+        {% endfor %}
+        {% else %}
+            <div class="row">
+                <h4 class="center-align page-header"><i>No recipes found!</i></h4>
+                <a href="{{ url_for('recipes')}}" class="waves-effect waves-light btn grey-button">Back to recipes</a>
+            </div>
+        {% endif %}
+        <div class="row">
+            <a href="{{ url_for('recipes')}}" class="waves-effect waves-light btn grey-button">All recipes</a> 
+        </div>
     </div>
 {% endblock %}
