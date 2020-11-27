@@ -24,33 +24,63 @@
                 </div>
             </div>
         </div>
+        {% if session.user|lower == "admin" %}
+            <h3 class="page-header">Blog Posts</h3>
+            <div class="row">
+                {% for blog in blogs %}
+                <div class="col s12">
+                    <div class="card horizontal">
+                        <div class="card-image s12 m4 responsive-img">
+                            <img src="{{ blog.blog_image }}">
+                        </div>
+                        <div class="card-stacked s12 m7">
+                            <div class="card-content">
+                                <h5 class="header recipe-header">{{ blog.blog_title }}</h5>
+                                <p>{{ blog.blog_description }}</p>
+                                <ul>
+                                    <li> Read time: {{ blog.blog_time }}</li>
+                                    <li>Author: <i>{{ blog.blog_author }}</i></li>
+                                    <li>{{ blog.blog_date }}</li>
+                                </ul>
+                            </div>
+                            <div class="card-action">
+                                <a href="{{ url_for('show_blog', blog_id=blog._id) }}" class="waves-effect waves-light btn green-button">Read Blog</a>
+                                <a href="{{ url_for('delete_blog', blog_id=blog._id)}}" class="waves-effect waves-light btn-small red-button right">Delete</a>
+                                <a href="{{ url_for('edit_blog', blog_id=blog._id)}}" class="waves-effect waves-light btn-small grey-button right">Edit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        {% endif %}
         <h3 class="page-header">My Recipes</h3>
         <div class="row">
             {% for recipe in recipes %}
                 {% if session.user|lower == recipe.created_by|lower %}
-                    <div class="col s12">
-                        <div class="card horizontal">
-                            <div class="card-image s12 m4 responsive-img">
-                                <img src="{{ recipe.recipe_image }}">
+                <div class="col s12">
+                    <div class="card horizontal">
+                        <div class="card-image s12 m4 responsive-img">
+                            <img src="{{ recipe.recipe_image }}">
+                        </div>
+                        <div class="card-stacked s12 m7">
+                            <div class="card-content">
+                                <h5 class="header recipe-header">{{ recipe.recipe_name }}</h5>
+                                <p>{{ recipe.recipe_description }}</p>
+                                <ul>
+                                    <li> Duration: {{ recipe.recipe_time }}</li>
+                                    <li>Difficulty: {{ recipe.recipe_difficulty.title() }}</li>
+                                    <li>Created by: <i>{{ recipe.created_by }}</i></li>
+                                </ul>
                             </div>
-                            <div class="card-stacked s12 m7">
-                                <div class="card-content">
-                                    <h5 class="header recipe-header">{{ recipe.recipe_name }}</h5>
-                                    <p>{{ recipe.recipe_description }}</p>
-                                    <ul>
-                                        <li> Duration: {{ recipe.recipe_time }}</li>
-                                        <li>Difficulty: {{ recipe.recipe_difficulty.title() }}</li>
-                                        <li>Created by: <i>{{ recipe.created_by }}</i></li>
-                                    </ul>
-                                </div>
-                                <div class="card-action">
-                                    <a href="{{ url_for('show_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn green-button">View Recipe</a>
-                                    <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-small red-button right">Delete</a>
-                                    <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-small grey-button right">Edit</a>
-                                </div>
+                            <div class="card-action">
+                                <a href="{{ url_for('show_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn green-button">View Recipe</a>
+                                <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-small red-button right">Delete</a>
+                                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-small grey-button right">Edit</a>
                             </div>
                         </div>
                     </div>
+                </div>
                 {% endif %}
             {% endfor %}
         </div>

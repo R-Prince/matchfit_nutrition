@@ -84,10 +84,11 @@ def profile(username):
     username = mongo.db.users.find_one(
         {"username": session['user']})
     recipes = list(mongo.db.recipes.find())
+    blogs = list(mongo.db.blogs.find())
     # Redirect user to profile page
     if session["user"]:
         return render_template(
-            "profile.html", username=username, recipes=recipes)
+            "profile.html", username=username, recipes=recipes, blogs=blogs)
     else:
         return redirect(url_for("login"))
 
@@ -198,6 +199,32 @@ def add_blog():
         return redirect(url_for("blogs"))
 
     return render_template("add_blog.html")
+
+
+@app.route("/delete_blog/<blog_id>")
+def delete_blog(blog_id):
+    mongo.db.blogs.remove({"_id": ObjectId(blog_id)})
+    flash("Blog Successfully Deleted")
+    return redirect(url_for("blogs"))
+
+
+@app.route("/edit_blog/<blog_id>", methods=["GET", "POST"])
+def edit_blog(blog_id):
+    blog = mongo.db.blogs.find_one({"_id": ObjectId(blog_id)})
+    if request.method == "POST":
+        update_blog = {
+            "blog_title": request.form.get("blog_title"),
+            "blog_description": request.form.get("blog_description"),
+            "blog_image": request.form.get("blog_image"),
+            "blog_time": request.form.get("blog_time"),
+            "blog_author": request.form.get("blog_author"),
+            "blog_date": request.form.get("blog_date"),
+            "blog_text": request.form.get("blog_text"),
+        }
+        mongo.db.blogs.update({"_id": ObjectId(blog_id)}, update_blog)
+        flash("Blog Successfully Updated")
+        return redirect(url_for("blogs"))
+    return render_template("edit_blog.html", blog=blog)
 
 
 if __name__ == "__main__":

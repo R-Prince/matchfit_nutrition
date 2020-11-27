@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2 class="center-align page-header">Edit Blog</h2>
+    <div class="container">
+        <div class="row">
+            <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('edit_blog', blog_id=blog._id) }}">
+                <div class="card-panel">
+                    <div class="row">
+                        <!--Blog Name-->
+                        <div class="input-field col s12">
+                            <input id="blog_title" name="blog_title" minlength="3" maxlength="50" type="text" class="validate" value="{{blog.blog_title}}" required>
+                            <label for="blog_title">Blog Title</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!--Blog Description-->
+                        <div class="input-field col s12">
+                            <textarea id="blog_description" type="text" name="blog_description" class="validate materialize-textarea" required>{{blog.blog_description}}</textarea>
+                            <label for="blog_description">Blog Preview</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!--Blog Time-->
+                        <div class="input-field col s6">
+                            <input id="blog_time" name="blog_time" type="text" class="validate" value="{{blog.blog_time}}" required>
+                            <label for="blog_time">Read Time</label>
+                        </div>
+                        <!--Blog Author -->
+                        <div class="input-field col s6">
+                            <input id="blog_author" name="blog_author" type="text" class="validate" required value="{{blog.blog_author}}">
+                            <label for="blog_author">Blog Author</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!--Blog Text-->
+                        <div class="input-field col s12">
+                            <textarea id="blog_text" type="text" name="blog_text" class="validate materialize-textarea" minlength="3" required>{{blog.blog_text}}</textarea>
+                            <label for="blog_text">Add Blog Text</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Blog Published Date -->
+                        <div class="input-field col s12">
+                            <input id="blog_date" type="text" class="datepicker validate" name="blog_date" required value="{{blog.blog_date}}">
+                            <label for="blog_date">Published Date</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!--Blog Image-->
+                        <div class="input-field col s12">
+                            <textarea id="blog_image" type="text" name="blog_image" class="validate materialize-textarea">{{blog.blog_image}}</textarea>
+                            <label for="blog_image">Add Image Link</label>
+                        </div>
+                    </div>
+                    <!--Update Blog Button-->
+                    <div class="row center-align">
+                        <button type="submit" class="waves-effect waves-light btn green-button">Update Blog</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
