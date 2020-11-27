@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2 class="center-align page-header">Add Blog</h2>
+    <div class="container">
+        <div class="row">
+            <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('add_recipe') }}">
+                <div class="card-panel">
+                    <div class="row">
+                        <!--Recipe Name-->
+                        <div class="input-field col s12">
+                            <input id="recipe_name" name="recipe_name" minlength="3" maxlength="50" type="text" class="validate" required>
+                            <label for="recipe_name">Recipe Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!--Recipe Description-->
+                        <div class="input-field col s12">
+                            <textarea id="recipe_description" type="text" name="recipe_description" class="validate materialize-textarea" required></textarea>
+                            <label for="recipe_description">  Brief Recipe Description</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!--Recipe Time-->
+                        <div class="input-field col s6">
+                            <input id="recipe_time" name="recipe_time" type="text" class="validate" required>
+                            <label for="recipe_time">Recipe Duration</label>
+                        </div>
+                        <!--Recipe difficulty-->
+                        <div class="input-field col s6">
+                            <select id="recipe_difficulty" name="recipe_difficulty" class="validate" required>
+                                <option value="" disabled selected>Select Difficulty</option>
+                                <option value="easy">Easy</option>
+                                <option value="moderate">Moderate</option>
+                                <option value="difficult">Difficult</option>
+                            </select>
+                            <label for="recipe_difficulty">Recipe Difficulty</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!--Recipe Ingredients-->
+                        <div class="input-field col s12">
+                            <textarea id="recipe_ingredients" type="text" name="recipe_ingredients" class="validate materialize-textarea" minlength="3" required></textarea>
+                            <label for="recipe_ingredients">Recipe Ingredients</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!--Recipe Method-->
+                        <div class="input-field col s12">
+                            <textarea id="recipe_method" type="text" name="recipe_method" class="validate materialize-textarea" minlength="3" required></textarea>
+                            <label for="recipe_method">Recipe Method</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!--Recipe Image-->
+                        <div class="input-field col s12">
+                            <textarea id="recipe_image" type="text" name="recipe_image" class="validate materialize-textarea"></textarea>
+                            <label for="recipe_image">Add Image Link</label>
+                        </div>
+                    </div>
+                    <!--Add Recipe Button-->
+                    <div class="row center-align">
+                        <button type="submit" class="waves-effect waves-light btn green-button">Add Blog</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

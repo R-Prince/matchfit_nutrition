@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+    <!--Blogs-->
+    <h3 class="center-align page-header">Blogs</h3>
+    <div class="container">
+        {% for blog in blogs %}
+            <div class="col s12 m7">
+                <div class="card horizontal">
+                    <div class="card-image s12 m4 responsive-img">
+                        <img src="{{ blog.blog_image }}">
+                    </div>
+                    <div class="card-stacked s12 m7">
+                        <div class="card-content">
+                            <h5 class="header recipe-header">{{ blog.blog_title }}</h5>
+                            <p>{{ blog.blog_description }}</p>
+                            <ul>
+                                <li> Read time: {{ blog.blog_time }}</li>
+                                <li>Author: <i>{{ blog.blog_author }}</i></li>
+                                <li>{{ blog.blog_date }}</li>
+                            </ul>
+                        </div>
+                        <div class="card-action">
+                            <a href="" class="waves-effect waves-light btn green-button">Read Blog</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

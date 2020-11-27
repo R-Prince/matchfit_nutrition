@@ -26,13 +26,6 @@ def home():
     return render_template("index.html", recipes=recipes)
 
 
-@app.route("/search", methods=["GET", "POST"])
-def search():
-    query = request.form.get("query")
-    recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
-    return render_template("recipes.html", recipes=recipes)
-
-
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -107,9 +100,16 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/recipes", methods=["GET", "POST"])
+@app.route("/recipes")
 def recipes():
     recipes = list(mongo.db.recipes.find())
+    return render_template("recipes.html", recipes=recipes)
+
+
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
     return render_template("recipes.html", recipes=recipes)
 
 
@@ -167,6 +167,17 @@ def show_recipe(recipe_id):
     ingredient = re.split(', |and', ingredients)
     return render_template(
         "show_recipe.html", recipe=recipe, ingredient=ingredient)
+
+
+@app.route("/blogs")
+def blogs():
+    blogs = list(mongo.db.blogs.find())
+    return render_template("blogs.html", blogs=blogs)
+
+
+@app.route("/add_blog")
+def add_blog():
+    return render_template("add_blog.html")
 
 
 if __name__ == "__main__":

@@ -31,6 +31,12 @@
     letter-spacing: 3px;
 }
 
+.orange-button{
+    background-color: #ef6c00;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 3px;
+}
+
 .red-button{
     background-color: #d32f2f;
     font-family: 'Oswald', sans-serif;
