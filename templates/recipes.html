@@ -3,6 +3,19 @@
     <!--Recipes-->
     <h3 class="center-align page-header">Recipes</h3>
     <div class="container">
+        <form action="{{ url_for('search') }}" method="post">
+            <div class="row center-align">
+                <div class="col s12 m6">
+                    <div class="input-field">
+                        <i class="fas fa-search prefix"></i>
+                        <input type="text" name="query" id="query" minlength="3" required>
+                        <label for="query">Search recipes</label>
+                    </div>
+                    <a href="{{ url_for('recipes') }}" class="btn-small waves-effect waves-light btn red-button">Reset</a>
+                    <button type="submit" class="btn-small waves-effect waves-light btn green-button">Search</button>
+                </div>
+            </div>
+        </form>
         {% for recipe in recipes %}
             <div class="col s12 m7">
                 <div class="card horizontal">
