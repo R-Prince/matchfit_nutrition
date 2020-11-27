@@ -175,8 +175,28 @@ def blogs():
     return render_template("blogs.html", blogs=blogs)
 
 
-@app.route("/add_blog")
+@app.route("/show_blog/<blog_id>")
+def show_blog(blog_id):
+    blog = mongo.db.blogs.find_one({"_id": ObjectId(blog_id)})
+    return render_template("show_blog.html", blog=blog)
+
+
+@app.route("/add_blog", methods=["GET", "POST"])
 def add_blog():
+    if request.method == "POST":
+        blog = {
+            "blog_title": request.form.get("blog_title"),
+            "blog_description": request.form.get("blog_description"),
+            "blog_image": request.form.get("blog_image"),
+            "blog_time": request.form.get("blog_time"),
+            "blog_author": request.form.get("blog_author"),
+            "blog_date": request.form.get("blog_date"),
+            "blog_text": request.form.get("blog_text"),
+        }
+        mongo.db.blogs.insert_one(blog)
+        flash("Blog Successfully Uploaded!")
+        return redirect(url_for("blogs"))
+
     return render_template("add_blog.html")
 
 

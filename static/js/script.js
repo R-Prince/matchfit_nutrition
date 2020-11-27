@@ -5,6 +5,13 @@ $(document).ready(function(){
     // Add Recipes - Select difficulty
     $('select').formSelect();
 
+    // Date Picker for blog form
+    $('.datepicker').datepicker({
+        showClearBtn: true,
+        i18n: {
+            done: "Select"
+        }
+    });
     // Validate Add Recipe materialize form (Copied from Code Institute - Materialize Form Validation)
     validateMaterializeSelect();
     function validateMaterializeSelect() {

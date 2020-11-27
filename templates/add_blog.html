@@ -3,61 +3,56 @@
     <h2 class="center-align page-header">Add Blog</h2>
     <div class="container">
         <div class="row">
-            <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('add_recipe') }}">
+            <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('add_blog') }}">
                 <div class="card-panel">
                     <div class="row">
-                        <!--Recipe Name-->
+                        <!--Blog Name-->
                         <div class="input-field col s12">
-                            <input id="recipe_name" name="recipe_name" minlength="3" maxlength="50" type="text" class="validate" required>
-                            <label for="recipe_name">Recipe Name</label>
+                            <input id="blog_title" name="blog_title" minlength="3" maxlength="50" type="text" class="validate" required>
+                            <label for="blog_title">Blog Title</label>
                         </div>
                     </div>
                     <div class="row">
-                        <!--Recipe Description-->
+                        <!--Blog Description-->
                         <div class="input-field col s12">
-                            <textarea id="recipe_description" type="text" name="recipe_description" class="validate materialize-textarea" required></textarea>
-                            <label for="recipe_description">  Brief Recipe Description</label>
+                            <textarea id="blog_description" type="text" name="blog_description" class="validate materialize-textarea" required></textarea>
+                            <label for="blog_description">Blog Preview</label>
                         </div>
                     </div>
                     <div class="row">
-                        <!--Recipe Time-->
+                        <!--Blog Time-->
                         <div class="input-field col s6">
-                            <input id="recipe_time" name="recipe_time" type="text" class="validate" required>
-                            <label for="recipe_time">Recipe Duration</label>
+                            <input id="blog_time" name="blog_time" type="text" class="validate" required>
+                            <label for="blog_time">Read Time</label>
                         </div>
-                        <!--Recipe difficulty-->
+                        <!--Blog Author -->
                         <div class="input-field col s6">
-                            <select id="recipe_difficulty" name="recipe_difficulty" class="validate" required>
-                                <option value="" disabled selected>Select Difficulty</option>
-                                <option value="easy">Easy</option>
-                                <option value="moderate">Moderate</option>
-                                <option value="difficult">Difficult</option>
-                            </select>
-                            <label for="recipe_difficulty">Recipe Difficulty</label>
+                            <input id="blog_author" name="blog_author" type="text" class="validate" required>
+                            <label for="blog_author">Blog Author</label>
                         </div>
                     </div>
                     <div class="row">
-                        <!--Recipe Ingredients-->
+                        <!--Blog Text-->
                         <div class="input-field col s12">
-                            <textarea id="recipe_ingredients" type="text" name="recipe_ingredients" class="validate materialize-textarea" minlength="3" required></textarea>
-                            <label for="recipe_ingredients">Recipe Ingredients</label>
+                            <textarea id="blog_text" type="text" name="blog_text" class="validate materialize-textarea" minlength="3" required></textarea>
+                            <label for="blog_text">Add Blog Text</label>
                         </div>
                     </div>
                     <div class="row">
-                        <!--Recipe Method-->
+                        <!-- Blog Published Date -->
                         <div class="input-field col s12">
-                            <textarea id="recipe_method" type="text" name="recipe_method" class="validate materialize-textarea" minlength="3" required></textarea>
-                            <label for="recipe_method">Recipe Method</label>
+                            <input id="blog_date" type="text" class="datepicker validate" name="blog_date" required>
+                            <label for="blog_date">Published Date</label>
                         </div>
                     </div>
                     <div class="row">
-                        <!--Recipe Image-->
+                        <!--Blog Image-->
                         <div class="input-field col s12">
-                            <textarea id="recipe_image" type="text" name="recipe_image" class="validate materialize-textarea"></textarea>
-                            <label for="recipe_image">Add Image Link</label>
+                            <textarea id="blog_image" type="text" name="blog_image" class="validate materialize-textarea"></textarea>
+                            <label for="blog_image">Add Image Link</label>
                         </div>
                     </div>
-                    <!--Add Recipe Button-->
+                    <!--Add Blog Button-->
                     <div class="row center-align">
                         <button type="submit" class="waves-effect waves-light btn green-button">Add Blog</button>
                     </div>

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2 class="page-header center-align">{{blog.blog_title}}</h2>
+    <div class="container">
+        <div class="row">
+            <img class="responsive-img" src="{{blog.blog_image}}">
+        </div>
+        <div class="row">
+            <ul>
+                <li>Read time: {{blog.blog_time}}</li>
+                <li>Published: {{blog.blog_date}}</li>
+                <li>Author: {{blog.blog_author}}</li>
+            </ul>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <p>{{blog.blog_text}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <a href="{{ url_for('blogs')}}" class="waves-effect waves-light btn grey-button">Back to blogs</a> 
+        </div>
+    </div>
+{% endblock %}
