@@ -117,29 +117,24 @@ nav ul li{
 }
 
 /* Feature Section - Home Page */
+.icon-block {
+  padding: 0 15px;
+}
+
 .feature-container{
-    padding: 50px 0px;
+    padding-bottom: 50px;
     background-color: #212121;
-}
-
-.feature{
-    margin: 25px 0px;
-    color: white;
-}
-
-.feature-icon{
-    font-size: 50px;
     color: white;
 }
 
 .feature-header{
     font-family: 'Big Shoulders Stencil Display', cursive;
     letter-spacing: 5px;
-    color: white;
 }
 
 .feature-text{
-    color: white;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 3px; 
 }
 
 /* Latest Recipe - Home Page */
