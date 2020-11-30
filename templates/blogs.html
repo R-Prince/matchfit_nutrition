@@ -4,7 +4,7 @@
     <h3 class="center-align page-header">Blogs</h3>
     <div class="container">
         {% for blog in blogs %}
-            <div class="col s12 m7">
+            <div class="col s12 m7 desktop-card">
                 <div class="card horizontal">
                     <div class="card-image s12 m4 responsive-img">
                         <img src="{{ blog.blog_image }}">
@@ -21,6 +21,30 @@
                         </div>
                         <div class="card-action">
                             <a href="{{ url_for('show_blog', blog_id=blog._id) }}" class="waves-effect waves-light btn green-button">Read Blog</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Mobile and Tablet screens -->
+            <div class="mobile-card">
+                <div class="row">
+                    <div class="col s12">
+                        <div class="card">
+                            <div class="card-image">
+                            <img src="{{ blog.blog_image }}">
+                            <span class="card-title recipe-header">{{ blog.blog_title }}</span>
+                            </div>
+                            <div class="card-content">
+                                <p>{{ blog.blog_description }}</p>
+                                <ul>
+                                    <li> Read time: {{ blog.blog_time }}</li>
+                                    <li>Author: <i>{{ blog.blog_author }}</i></li>
+                                    <li>{{ blog.blog_date }}</li>
+                                </ul>
+                            </div>
+                            <div class="card-action">
+                                <a href="{{ url_for('show_blog', blog_id=blog._id) }}" class="waves-effect waves-light btn green-button">Read Blog</a>
+                            </div>
                         </div>
                     </div>
                 </div>
