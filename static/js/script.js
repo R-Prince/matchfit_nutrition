@@ -42,4 +42,13 @@ $(document).ready(function(){
     }
 });
 
+// Function to add another ingredient to recipe
+$("#add_ingredient").click(function(){
+    ingredient = "<div class='input-field col s6'><input id='recipe_ingredient' type='text' name='recipe_ingredient[]' class='validate materialize-textarea' minlength='3' required><label for='recipe_ingredient'>Ingredient</label><i id='delete_ingredient' class='fas fa-trash-alt delete-button'></i></div>"
+    $("#recipe-field").append(ingredient)
+})
 
+// Function to delete ingredient field when adding or deleting recipes
+$("#recipe-field").on("click", "#delete_ingredient", function(){ 
+    $(this).parent('div').remove(); 
+});

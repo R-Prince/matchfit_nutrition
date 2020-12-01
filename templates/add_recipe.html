@@ -16,7 +16,7 @@
                         <!--Recipe Description-->
                         <div class="input-field col s12">
                             <textarea id="recipe_description" type="text" name="recipe_description" class="validate materialize-textarea" required></textarea>
-                            <label for="recipe_description">  Brief Recipe Description</label>
+                            <label for="recipe_description">Brief Recipe Description</label>
                         </div>
                     </div>
                     <div class="row">
@@ -36,12 +36,16 @@
                             <label for="recipe_difficulty">Recipe Difficulty</label>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" id="recipe-field">
                         <!--Recipe Ingredients-->
-                        <div class="input-field col s12">
-                            <textarea id="recipe_ingredients" type="text" name="recipe_ingredients" class="validate materialize-textarea" minlength="3" required></textarea>
-                            <label for="recipe_ingredients">Recipe Ingredients</label>
+                        <div class="input-field col s6">
+                            <input id="recipe_ingredient" type="text" name="recipe_ingredient[]" class="validate materialize-textarea" minlength="3" required>
+                            <label for="recipe_ingredient">Ingredient</label>
                         </div>
+                    </div>
+                    <div class="row">
+                        <!--button to add another ingredient-->
+                        <button class="btn-small green-button col s4" id="add_ingredient">Add Ingredient</button>
                     </div>
                     <div class="row">
                         <!--Recipe Method-->

@@ -122,7 +122,7 @@ def add_recipe():
             "recipe_description": request.form.get("recipe_description"),
             "recipe_time": request.form.get("recipe_time"),
             "recipe_difficulty": request.form.get("recipe_difficulty"),
-            "recipe_ingredients": request.form.get("recipe_ingredients"),
+            "recipe_ingredients": request.form.getlist("recipe_ingredient[]"),
             "recipe_method": request.form.get("recipe_method"),
             "recipe_image": request.form.get("recipe_image"),
             "created_by": session['user']
@@ -143,7 +143,7 @@ def edit_recipe(recipe_id):
             "recipe_description": request.form.get("recipe_description"),
             "recipe_time": request.form.get("recipe_time"),
             "recipe_difficulty": request.form.get("recipe_difficulty"),
-            "recipe_ingredients": request.form.get("recipe_ingredients"),
+            "recipe_ingredients": request.form.getlist("recipe_ingredient[]"),
             "recipe_method": request.form.get("recipe_method"),
             "recipe_image": request.form.get("recipe_image"),
             "created_by": session['user']
@@ -164,10 +164,8 @@ def delete_recipe(recipe_id):
 @app.route("/show_recipe/<recipe_id>")
 def show_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    ingredients = recipe["recipe_ingredients"]
-    ingredient = re.split(', |and', ingredients)
     return render_template(
-        "show_recipe.html", recipe=recipe, ingredient=ingredient)
+        "show_recipe.html", recipe=recipe)
 
 
 @app.route("/blogs")

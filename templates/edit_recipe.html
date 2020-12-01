@@ -36,12 +36,19 @@
                             <label for="recipe_difficulty">Recipe Difficulty</label>
                         </div>
                     </div>
+                    <div class="row" id="recipe-field">
+                        {% for ingredient in recipe.recipe_ingredients%}
+                            <!--Recipe Ingredients-->
+                            <div class="input-field col s6">
+                                <input id="recipe_ingredient" type="text" name="recipe_ingredient[]" class="validate materialize-textarea" minlength="3" required value="{{ingredient}}">
+                                <label for="recipe_ingredients">Recipe Ingredient</label>
+                                <i id="delete_ingredient" class="fas fa-trash-alt delete-button"></i>
+                            </div>
+                        {% endfor %}
+                    </div>
                     <div class="row">
-                        <!--Recipe Ingredients-->
-                        <div class="input-field col s12">
-                            <textarea id="recipe_ingredients" type="text" name="recipe_ingredients" class="validate materialize-textarea" minlength="3" required>{{ recipe.recipe_ingredients}}</textarea>
-                            <label for="recipe_ingredients">Recipe Ingredients</label>
-                        </div>
+                        <!--button to add another ingredient-->
+                        <button class="btn-small green-button col s4" id="add_ingredient">Add Ingredient</button>
                     </div>
                     <div class="row">
                         <!--Recipe Method-->

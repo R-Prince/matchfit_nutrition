@@ -18,8 +18,8 @@
             <div class="col s12 m4 recipe-ingredients recipe-box">
                 <h5 class="recipe-title">Ingredients</h5>
                 <ul>
-                    {% for item in ingredient %}
-                        <li class="ingredient">{{-item-}}</li>
+                    {% for ingredient in recipe.recipe_ingredients %}
+                        <li class="ingredient">{{ingredient.title()}}</li>
                     {% endfor %}
                 </ul>
             </div>

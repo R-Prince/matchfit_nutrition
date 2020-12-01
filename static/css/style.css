@@ -44,6 +44,14 @@
     margin: 0 2px;
 }
 
+.delete-button{
+    color: #d32f2f;
+}
+
+.delete-button:hover {
+    cursor:pointer;
+}
+
 /* Navbar */
 .nav-logo{
     font-family: 'Big Shoulders Stencil Display', cursive;
