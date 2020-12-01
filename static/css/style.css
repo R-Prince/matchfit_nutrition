@@ -204,7 +204,6 @@ footer a{
 
 /* Show Recipe Page */
 
-
 .recipe-ingredients{
     background-color: #212121;
     color: white;
@@ -227,6 +226,10 @@ footer a{
 
 .ingredient{
     margin: 5px 0px;
+}
+
+.method{
+    margin: 7px 0px;
 }
 
 /* Smaller container for recipe box on smaller screens */

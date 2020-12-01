@@ -25,7 +25,11 @@
             </div>
             <div class="col s12 m8 recipe-method recipe-box">
                 <h5 class="recipe-title center-align">Method</h5>
-                <p>{{recipe.recipe_method}}</p>
+                <ol>
+                    {% for method in recipe.recipe_method %}
+                        <li class="method">{{method}}</li>
+                    {% endfor %}
+                </ol>
             </div>
         </div>
         <div class="row">

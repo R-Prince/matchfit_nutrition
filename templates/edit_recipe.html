@@ -36,12 +36,13 @@
                             <label for="recipe_difficulty">Recipe Difficulty</label>
                         </div>
                     </div>
-                    <div class="row" id="recipe-field">
+                    <div class="row" id="recipe_ingredient_field">
                         {% for ingredient in recipe.recipe_ingredients%}
                             <!--Recipe Ingredients-->
                             <div class="input-field col s6">
                                 <input id="recipe_ingredient" type="text" name="recipe_ingredient[]" class="validate materialize-textarea" minlength="3" required value="{{ingredient}}">
                                 <label for="recipe_ingredients">Recipe Ingredient</label>
+                                <!--Delete ingredient field-->
                                 <i id="delete_ingredient" class="fas fa-trash-alt delete-button"></i>
                             </div>
                         {% endfor %}
@@ -50,12 +51,20 @@
                         <!--button to add another ingredient-->
                         <button class="btn-small green-button col s4" id="add_ingredient">Add Ingredient</button>
                     </div>
+                    <div class="row" id="recipe_method_field">
+                        {% for method in recipe.recipe_method%}
+                            <!--Recipe Method-->
+                            <div class="input-field col s12">
+                                <textarea id="recipe_method" type="text" name="recipe_method[]" class="validate materialize-textarea" minlength="3" required>{{ method}}</textarea>
+                                <label for="recipe_method">Recipe Method</label>
+                                <!--Delete ingredient field-->
+                                <i id="delete_method" class="fas fa-trash-alt delete-button"></i>
+                            </div>
+                        {% endfor %}
+                    </div>
                     <div class="row">
-                        <!--Recipe Method-->
-                        <div class="input-field col s12">
-                            <textarea id="recipe_method" type="text" name="recipe_method" class="validate materialize-textarea" minlength="3" required>{{ recipe.recipe_method}}</textarea>
-                            <label for="recipe_method">Recipe Method</label>
-                        </div>
+                        <!--button to add another method-->
+                        <button class="btn-small grey-button col" id="add_method">Add Method</button>
                     </div>
                     <div class="row">
                         <!--Recipe Image-->
