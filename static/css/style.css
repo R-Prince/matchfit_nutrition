@@ -203,7 +203,6 @@ footer a{
 }
 
 /* Show Recipe Page */
-
 .recipe-ingredients{
     background-color: #212121;
     color: white;
@@ -239,3 +238,9 @@ footer a{
   }
 }
 
+/* Show blog page */
+.blog-text{
+    border: none;
+    width: 100%;
+    height: 80vh;
+}

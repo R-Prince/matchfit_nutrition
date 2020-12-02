@@ -63,3 +63,8 @@ $("#add_method").click(function(){
 $("#recipe_method_field").on("click", "#delete_method", function(){ 
     $(this).parent('div').remove(); 
 });
+
+tinymce.init({
+  selector: 'textarea#blog_text',
+  height: 600
+});
