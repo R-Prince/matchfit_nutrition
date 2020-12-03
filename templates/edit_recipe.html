@@ -20,8 +20,20 @@
                         </div>
                     </div>
                     <div class="row">
+                        <!--Recipe category-->
+                        <div class="input-field col s12 m6">
+                            <select id="recipe_category" name="recipe_category" class="validate" required>
+                                <option selected>{{recipe.category.title()}}</option>
+                                <option value="breakfast">Breakfast</option>
+                                <option value="lunch">Lunch</option>
+                                <option value="dinner">Dinner</option>
+                            </select>
+                            <label for="recipe_category">Recipe Category</label>
+                        </div>
+                    </div>
+                    <div class="row">
                         <!--Recipe difficulty-->
-                        <div class="input-field col s6">
+                        <div class="input-field col s12 m6">
                             <select id="recipe_difficulty" name="recipe_difficulty" class="validate" required>
                                 <option selected>{{recipe.recipe_difficulty.title()}}</option>
                                 <option value="easy">Easy</option>
@@ -31,7 +43,7 @@
                             <label for="recipe_difficulty">Recipe Difficulty</label>
                         </div>
                         <!--Recipe Time-->
-                        <div class="input-field col s4">
+                        <div class="input-field col s12 m4">
                             <input id="recipe_time" name="recipe_time" type="number" class="validate" required value="{{ recipe.recipe_time}}">
                             <label for="recipe_time">Recipe Duration (minutes)</label>
                         </div>
