@@ -1,4 +1,4 @@
-import os, re
+import os
 from flask import (
     Flask, flash, render_template,
     redirect, session, url_for,
@@ -6,6 +6,7 @@ from flask import (
 from flask_pymongo import PyMongo
 from werkzeug.security import generate_password_hash, check_password_hash
 from bson.objectid import ObjectId
+from datetime import datetime
 if os.path.exists("env.py"):
     import env
 
@@ -22,7 +23,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/home")
 def home():
-    recipes = list(mongo.db.recipes.find())
+    recipes = list(mongo.db.recipes.find().limit(3).sort("date_created", -1))
     return render_template("index.html", recipes=recipes)
 
 
@@ -83,7 +84,7 @@ def login():
 def profile(username):
     username = mongo.db.users.find_one(
         {"username": session['user']})
-    recipes = list(mongo.db.recipes.find())
+    recipes = list(mongo.db.recipes.find().sort("date_created", -1))
     blogs = list(mongo.db.blogs.find())
     # Redirect user to profile page
     if session["user"]:
@@ -103,7 +104,7 @@ def logout():
 
 @app.route("/recipes")
 def recipes():
-    recipes = list(mongo.db.recipes.find())
+    recipes = list(mongo.db.recipes.find().sort("date_created", -1))
     return render_template("recipes.html", recipes=recipes)
 
 
@@ -132,6 +133,7 @@ def add_recipe():
             "recipe_ingredients": request.form.getlist("recipe_ingredient[]"),
             "recipe_method": request.form.getlist("recipe_method[]"),
             "recipe_image": request.form.get("recipe_image"),
+            "date_created": datetime.today(),
             "created_by": session['user']
         }
         mongo.db.recipes.insert_one(recipe)
@@ -153,6 +155,7 @@ def edit_recipe(recipe_id):
             "recipe_ingredients": request.form.getlist("recipe_ingredient[]"),
             "recipe_method": request.form.getlist("recipe_method[]"),
             "recipe_image": request.form.get("recipe_image"),
+            "date_created": datetime.today(),
             "created_by": session['user']
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, update_recipe)
