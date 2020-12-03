@@ -180,7 +180,7 @@ def show_recipe(recipe_id):
 
 @app.route("/blogs")
 def blogs():
-    blogs = list(mongo.db.blogs.find())
+    blogs = list(mongo.db.blogs.find().sort("date_created", -1))
     return render_template("blogs.html", blogs=blogs)
 
 
@@ -197,10 +197,11 @@ def add_blog():
             "blog_title": request.form.get("blog_title"),
             "blog_description": request.form.get("blog_description"),
             "blog_image": request.form.get("blog_image"),
-            "blog_time": request.form.get("blog_time"),
+            "blog_time": int(request.form.get("blog_time")),
             "blog_author": request.form.get("blog_author"),
             "blog_date": request.form.get("blog_date"),
             "blog_text": request.form.get("blog_text"),
+            "date_created": datetime.today()
         }
         mongo.db.blogs.insert_one(blog)
         flash("Blog Successfully Uploaded!")
@@ -224,10 +225,11 @@ def edit_blog(blog_id):
             "blog_title": request.form.get("blog_title"),
             "blog_description": request.form.get("blog_description"),
             "blog_image": request.form.get("blog_image"),
-            "blog_time": request.form.get("blog_time"),
+            "blog_time": int(request.form.get("blog_time")),
             "blog_author": request.form.get("blog_author"),
             "blog_date": request.form.get("blog_date"),
             "blog_text": request.form.get("blog_text"),
+            "date_created": datetime.today()
         }
         mongo.db.blogs.update({"_id": ObjectId(blog_id)}, update_blog)
         flash("Blog Successfully Updated")
