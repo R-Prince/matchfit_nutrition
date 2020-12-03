@@ -51,7 +51,7 @@
                     <div class="row" id="recipe_ingredient_field">
                         {% for ingredient in recipe.recipe_ingredients%}
                             <!--Recipe Ingredients-->
-                            <div class="input-field col s6">
+                            <div class="input-field col s12 m6">
                                 <input id="recipe_ingredient" type="text" name="recipe_ingredient[]" class="validate materialize-textarea" minlength="3" required value="{{ingredient}}">
                                 <label for="recipe_ingredients">Recipe Ingredient</label>
                                 <!--Delete ingredient field-->
