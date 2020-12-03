@@ -127,7 +127,7 @@ def add_recipe():
         recipe = {
             "recipe_name": request.form.get("recipe_name"),
             "recipe_description": request.form.get("recipe_description"),
-            "recipe_time": request.form.get("recipe_time"),
+            "recipe_time": int(request.form.get("recipe_time")),
             "recipe_difficulty": request.form.get("recipe_difficulty"),
             "recipe_ingredients": request.form.getlist("recipe_ingredient[]"),
             "recipe_method": request.form.getlist("recipe_method[]"),
@@ -148,7 +148,7 @@ def edit_recipe(recipe_id):
         update_recipe = {
             "recipe_name": request.form.get("recipe_name"),
             "recipe_description": request.form.get("recipe_description"),
-            "recipe_time": request.form.get("recipe_time"),
+            "recipe_time": int(request.form.get("recipe_time")),
             "recipe_difficulty": request.form.get("recipe_difficulty"),
             "recipe_ingredients": request.form.getlist("recipe_ingredient[]"),
             "recipe_method": request.form.getlist("recipe_method[]"),
