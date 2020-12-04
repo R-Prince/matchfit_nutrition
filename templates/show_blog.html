@@ -24,5 +24,16 @@
         <div class="row">
             <a href="{{ url_for('blogs')}}" class="waves-effect waves-light btn grey-button">Back to blogs</a> 
         </div>
+        {% if session.user|lower == "admin" %}
+            <div class="fixed-action-btn">
+                <a class="btn-floating btn-large grey darken-4">
+                    <i class="fas fa-pen"></i>
+                </a>
+                <ul>
+                    <li><a href="{{ url_for('edit_blog', blog_id=blog._id)}}" class="btn-floating orange darken-3 tooltipped" data-position="left" data-tooltip="Edit blog"><i class="fas fa-edit"></i></a></li>
+                    <li><a href="{{ url_for('delete_blog', blog_id=blog._id)}}" class="btn-floating red darken-2 tooltipped" data-position="left" data-tooltip="Delete blog"><i class="fas fa-trash-alt"></i></a></li>
+                </ul>
+            </div>
+        {% endif %}
     </div>
 {% endblock %}

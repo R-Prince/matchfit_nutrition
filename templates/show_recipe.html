@@ -39,5 +39,16 @@
         <div class="row">
             <a href="{{ url_for('recipes')}}" class="waves-effect waves-light btn grey-button">Back to recipes</a> 
         </div>
+        {% if session.user|lower == recipe.created_by|lower %}
+            <div class="fixed-action-btn">
+                <a class="btn-floating btn-large grey darken-4">
+                    <i class="fas fa-pen"></i>
+                </a>
+                <ul>
+                    <li><a href="{{ url_for('edit_recipe', recipe_id=recipe._id)}}" class="btn-floating orange darken-3 tooltipped" data-position="left" data-tooltip="Edit recipe"><i class="fas fa-edit"></i></a></li>
+                    <li><a href="{{ url_for('delete_recipe', recipe_id=recipe._id)}}" class="btn-floating red darken-2 tooltipped" data-position="left" data-tooltip="Delete recipe"><i class="fas fa-trash-alt"></i></a></li>
+                </ul>
+            </div>
+        {% endif %}
     </div>
 {% endblock %}

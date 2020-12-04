@@ -12,6 +12,12 @@ $(document).ready(function(){
             done: "Select"
         }
     });
+    
+    // Floating action button
+    $('.fixed-action-btn').floatingActionButton();
+
+    // Tooltip on floating action buttons
+    $('.tooltipped').tooltip();
 
     // Validate Add Recipe materialize form (Copied from Code Institute - Materialize Form Validation)
     validateMaterializeSelect();
