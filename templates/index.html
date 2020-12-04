@@ -2,11 +2,15 @@
 {% block content %}
     <!--Hero Section-->
     <div class="hero-section">
-        <h1 class="center-align hero-header">MATCH<span>FIT</span> NUTRITION</h1>
-        <p class="center-align hero-text">FIND THE BEST RECIPES TO FUEL YOUR PERFORMANCE</p>
-        <a href="{{ url_for('recipes' )}}" class="green-button waves-effect waves-light btn-large">View Recipes</a>
+        <div class="video-container">
+            <video src="{{ url_for('static', filename='videos/hero-video.mp4') }}" autoplay muted loop></video>
+        </div>
+        <div class="hero-content">
+            <h1 class="center-align hero-header">MATCH<span>FIT</span> NUTRITION</h1>
+            <p class="center-align hero-text">FIND THE BEST RECIPES TO FUEL YOUR PERFORMANCE</p>
+            <a href="{{ url_for('recipes' )}}" class="green-button waves-effect waves-light btn-large">View Recipes</a>
+        </div>
     </div>
-
     <!--Features Section-->
     <div class="row feature-container">
         <div class="col s12 m4">
@@ -19,7 +23,7 @@
         </div>
         <div class="col s12 m4">
             <div class="icon-block center-align">
-                <h2 class="center"><i class="fas fa-utensils feature-icon"></i></h2>
+                <h2 class="center"><i class="fas fa-retweet feature-icon"></i></h2>
                 <h5 class="center feature-header">Share your favourite recipes</h5>
                 <p class="feature-text">Registered users can share their favourite recipes with the community.</p>
                 <a href="{{ url_for('register' )}}" class="waves-effect waves-light btn green-button">Register now</a>
@@ -27,7 +31,7 @@
         </div>
         <div class="col s12 m4">
             <div class="icon-block center-align">
-                <h2 class="center"><i class="fas fa-book"></i></h2>
+                <h2 class="center"><i class="fas fa-award feature-icon"></i></h2>
                 <h5 class="center feature-header">Top tips from Sport Nutritionists</h5>
                 <p class="feature-text">Weekly articles and recipes from some of the best sport nutritionists in the world.</p>
                 <a href="{{ url_for('blogs')}}" class="waves-effect waves-light btn green-button">View Blogs</a>
