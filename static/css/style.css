@@ -202,15 +202,6 @@ footer a{
     font-size: 2rem;
 }
 
-.edit-icon{
-    color: #212121;
-    font-size: 2rem;
-}
-
-.edit-icon:hover {
-    cursor:pointer;
-}
-
 /* Show Recipe Page */
 .recipe-ingredients{
     background-color: #212121;
