@@ -225,7 +225,7 @@ nav ul li{
 }
 
 /* Latest Recipe - Home Page */
-.recipe-header{
+.card-header{
     font-family: 'Big Shoulders Inline Display', cursive;
     letter-spacing: 5px;
 }
@@ -247,6 +247,28 @@ nav ul li{
   color: #fff; 
   display: inline;
   padding: 0.5rem;
+}
+
+/* About Us - Home Page */
+.about-text{
+    font-size: 18px;
+    letter-spacing: 3px;
+    color: white;
+}
+
+.about-section{
+    margin: 2px;
+}
+
+.about-container{
+    background-color: #212121;
+    padding: 10px 0px 30px 0px;
+    margin: 30px 0px;
+}
+
+.about-icon{
+    font-size: 60px;
+    color: #76ff03;
 }
 
 /* Footer Section */
@@ -344,26 +366,4 @@ footer a{
     font-size: 18px;
     letter-spacing: 2px;
     font-family: 'Oswald', sans-serif;
-}
-
-/* About Us Section */
-.about-text{
-    font-size: 18px;
-    letter-spacing: 3px;
-    color: white;
-}
-
-.about-section{
-    margin: 2px;
-}
-
-.about-container{
-    background-color: #212121;
-    padding: 10px 0px 30px 0px;
-    margin: 30px 0px;
-}
-
-.about-icon{
-    font-size: 60px;
-    color: #76ff03;
 }
