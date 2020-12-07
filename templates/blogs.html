@@ -16,11 +16,11 @@
                     </div>
                     <div class="card-stacked s12 m7">
                         <div class="card-content">
-                            <h5 class="header recipe-header">{{ blog.blog_title }}</h5>
-                            <p>{{ blog.blog_description }}</p>
-                            <ul>
-                                <li> Read time: {{ blog.blog_time }} minutes</li>
-                                <li>Author: <i>{{ blog.blog_author }}</i></li>
+                            <h5 class="header card-header">{{ blog.blog_title }}</h5>
+                            <p class="card-description">{{ blog.blog_description }}</p>
+                            <ul class="card-details">
+                                <li>Read time: {{ blog.blog_time }} minutes</li>
+                                <li>Author: {{ blog.blog_author }}</li>
                             </ul>
                         </div>
                         <div class="card-action">
@@ -40,13 +40,13 @@
                                 {% else %}
                                     <img class="responsive-img" src="https://images.unsplash.com/photo-1591189863430-ab87e120f312?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Sport Nutrition Image">
                                 {% endif %}
-                                <span class="card-title recipe-header">{{ blog.blog_title }}</span>
+                                <span class="card-title card-header">{{ blog.blog_title }}</span>
                             </div>
                             <div class="card-content">
-                                <p>{{ blog.blog_description }}</p>
-                                <ul>
+                                <p class="card-description">{{ blog.blog_description }}</p>
+                                <ul class="card-details">
                                     <li> Read time: {{ blog.blog_time }} minutes</li>
-                                    <li>Author: <i>{{ blog.blog_author }}</i></li>
+                                    <li>Author: {{ blog.blog_author }}</li>
                                 </ul>
                             </div>
                             <div class="card-action">

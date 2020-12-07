@@ -40,11 +40,11 @@
                         </div>
                         <div class="card-stacked s12 m7">
                             <div class="card-content">
-                                <h5 class="header recipe-header">{{ blog.blog_title }}</h5>
-                                <p>{{ blog.blog_description }}</p>
-                                <ul>
+                                <h5 class="header card-header">{{ blog.blog_title }}</h5>
+                                <p class="card-description">{{ blog.blog_description }}</p>
+                                <ul class="card-details">
                                     <li> Read time: {{ blog.blog_time }} minutes</li>
-                                    <li>Author: <i>{{ blog.blog_author }}</i></li>
+                                    <li>Author: {{ blog.blog_author }}</li>
                                 </ul>
                             </div>
                             <div class="card-action">
@@ -66,14 +66,14 @@
                                 {% else %}
                                     <img class="responsive-img" src="https://images.unsplash.com/photo-1591189863430-ab87e120f312?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Sport Nutrition Image">
                                 {% endif %}
-                                <span class="card-title recipe-header">{{ blog.blog_title }}</span>
+                                <span class="card-title card-header">{{ blog.blog_title }}</span>
                                 <a href="{{ url_for('edit_blog', blog_id=blog._id)}}" class="btn-floating halfway-fab waves-effect waves-light grey darken-4"><i class="fas fa-user-edit"></i></a>
                                 </div>
                                 <div class="card-content">
-                                    <p>{{ blog.blog_description }}</p>
-                                    <ul>
+                                    <p class="card-description">{{ blog.blog_description }}</p>
+                                    <ul class="card-details">
                                         <li> Read time: {{ blog.blog_time }} minutes</li>
-                                        <li>Author: <i>{{ blog.blog_author }}</i></li>
+                                        <li>Author: {{ blog.blog_author }}</li>
                                     </ul>
                                 </div>
                                 <div class="card-action">
@@ -103,9 +103,9 @@
                         </div>
                         <div class="card-stacked s12 m7">
                             <div class="card-content">
-                                <h5 class="header recipe-header">{{ recipe.recipe_name }}</h5>
-                                <p>{{ recipe.recipe_description }}</p>
-                                <ul>
+                                <h5 class="header card-header">{{ recipe.recipe_name }}</h5>
+                                <p class="card-description">{{ recipe.recipe_description }}</p>
+                                <ul class="card-details">
                                     <li>Category: {{recipe.category.title()}}</li>
                                     <li> Duration: {{ recipe.recipe_time }} minutes</li>
                                     <li>Difficulty: {{ recipe.recipe_difficulty.title() }}</li>
@@ -130,13 +130,13 @@
                                     {% else %}
                                         <img class="responsive-img" src="https://images.unsplash.com/photo-1509358271058-acd22cc93898?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Image of seasoning and spoons">
                                     {% endif %}
-                                    <span class="card-title recipe-header">{{ recipe.recipe_name }}
+                                    <span class="card-title card-header">{{ recipe.recipe_name }}
                                     </span>
                                     <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-floating halfway-fab waves-effect waves-light grey darken-4"><i class="fas fa-user-edit"></i></a>
                                 </div>
                                 <div class="card-content">
-                                    <p>{{recipe.recipe_description}}</p>
-                                    <ul>
+                                    <p class="card-description">{{recipe.recipe_description}}</p>
+                                    <ul class="card-details">
                                         <li>Category: {{recipe.category.title()}}</li>
                                         <li> Duration: {{ recipe.recipe_time }} minutes</li>
                                         <li>Difficulty: {{ recipe.recipe_difficulty.title() }}</li>

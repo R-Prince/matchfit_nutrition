@@ -10,10 +10,10 @@
             {% endif %}
         </div>
         <div class="row center-align">
-            <p><i>{{recipe.recipe_description}}</i></p>
+            <p class="recipe-description"><i>{{recipe.recipe_description}}</i></p>
         </div>
         <div class="row">
-            <ul>
+            <ul class="recipe-details">
                 <li>Duration: {{recipe.recipe_time}} minutes</li>
                 <li>Difficulty: {{recipe.recipe_difficulty}}</li>
             </ul>
@@ -35,6 +35,9 @@
                     {% endfor %}
                 </ol>
             </div>
+        </div>
+        <div class="row right-align">
+            <span class="recipe-created_by"><i>Recipe created by: {{recipe.created_by}}</i></span>
         </div>
         <div class="row">
             <a href="{{ url_for('recipes')}}" class="waves-effect waves-light btn grey-button">Back to recipes</a> 
