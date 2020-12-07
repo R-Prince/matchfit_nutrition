@@ -71,6 +71,7 @@ $("#recipe_method_field").on("click", "#delete_method", function(){
     $(this).parent('div').remove(); 
 });
 
+// Rich text editor for creating blog posts
 tinymce.init({
   selector: 'textarea#blog_text',
   height: 600

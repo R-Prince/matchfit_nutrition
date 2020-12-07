@@ -31,7 +31,7 @@
         </div>
         <div class="col s12 m4">
             <div class="icon-block center-align">
-                <h2 class="center"><i class="fas fa-award feature-icon"></i></h2>
+                <h2 class="center"><i class="fas fa-heartbeat feature-icon"></i></h2>
                 <h5 class="center feature-header">Top tips from Sport Nutritionists</h5>
                 <p class="feature-text">Weekly articles and recipes from some of the best sport nutritionists in the world.</p>
                 <a href="{{ url_for('blogs')}}" class="waves-effect waves-light btn green-button">View Blogs</a>
@@ -97,6 +97,23 @@
                 </div>
             </div>
         {% endfor %}
+    </div>
+    <!--Meet the Team Section-->
+    <div class="row about-container">
+        <h3 class="center-align white-page-header">About Us</h3>
+        <div class="col s12 m8 offset-m2 center-align about-section">
+            <p class="about-text">The foods and drinks that players choose
+            to consume can affect how they perform in
+            sport and help them to stay fit and healthy.
+            All players should choose foods wisely to
+            help achieve their goals in sport. MatchFit Nutrtion is committed to helping all players to
+            achieve their goals. This website aims to share practical
+            advice on eating for health and
+            performance in sport in order for you to play at your best. Matchfit Nutrition was created to help athletes improve their performance through nutrition and to create a community where fellow athletes can share their recipes with the world.</p>
+            <i class="fas fa-arrow-down about-icon "></i>
+        </div>
+    </div>
+    <div class="container">
         <!--Latest Blog-->
         <h3 class="center-align page-header">Latest Blog</h3> 
         {% for blog in blogs %}
