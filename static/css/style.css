@@ -23,18 +23,21 @@
     background-color:#76ff03;
     font-family: 'Oswald', sans-serif;
     letter-spacing: 5px;
+    margin: 5px 0;
 }
 
 .grey-button{
     background-color: #212121;
     font-family: 'Oswald', sans-serif;
     letter-spacing: 3px;
+    margin: 5px 0;
 }
 
 .orange-button{
     background-color: #ef6c00;
     font-family: 'Oswald', sans-serif;
     letter-spacing: 3px;
+    margin: 5px 0;
 }
 
 .red-button{
@@ -42,6 +45,7 @@
     font-family: 'Oswald', sans-serif;
     letter-spacing: 3px;
     margin: 0 2px;
+    margin: 5px 0;
 }
 
 .delete-button{
@@ -158,6 +162,7 @@ nav ul li{
 /* Feature Section - Home Page */
 .icon-block {
   padding: 0 15px;
+  margin-bottom: 15px;
 }
 
 .feature-container{

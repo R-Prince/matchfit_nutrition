@@ -24,7 +24,8 @@ mongo = PyMongo(app)
 @app.route("/home")
 def home():
     recipes = list(mongo.db.recipes.find().limit(3).sort("date_created", -1))
-    return render_template("index.html", recipes=recipes)
+    blogs = list(mongo.db.blogs.find().limit(1).sort("date_created", -1))
+    return render_template("index.html", recipes=recipes, blogs=blogs)
 
 
 @app.route("/register", methods=["GET", "POST"])

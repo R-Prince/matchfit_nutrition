@@ -33,9 +33,9 @@
                     <div class="card horizontal">
                         <div class="card-image s12 m4">
                             {% if blog.blog_image %}
-                                <img class="responsive-img" src="{{ blog.blog_image }}">
+                                <img class="responsive-img" src="{{ blog.blog_image }}" alt="Sport Nutrition Image">
                             {% else %}
-                                <img class="responsive-img" src="https://images.unsplash.com/photo-1591189863430-ab87e120f312?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="">
+                                <img class="responsive-img" src="https://images.unsplash.com/photo-1591189863430-ab87e120f312?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Sport Nutrition Image">
                             {% endif %}
                         </div>
                         <div class="card-stacked s12 m7">
@@ -62,9 +62,9 @@
                             <div class="card">
                                 <div class="card-image">
                                 {% if blog.blog_image %}
-                                    <img class="responsive-img" src="{{ blog.blog_image }}">
+                                    <img class="responsive-img" src="{{ blog.blog_image }}" alt="Sport Nutrition Image">
                                 {% else %}
-                                    <img class="responsive-img" src="https://images.unsplash.com/photo-1591189863430-ab87e120f312?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="">
+                                    <img class="responsive-img" src="https://images.unsplash.com/photo-1591189863430-ab87e120f312?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Sport Nutrition Image">
                                 {% endif %}
                                 <span class="card-title recipe-header">{{ blog.blog_title }}</span>
                                 <a href="{{ url_for('edit_blog', blog_id=blog._id)}}" class="btn-floating halfway-fab waves-effect waves-light grey darken-4"><i class="fas fa-user-edit"></i></a>
@@ -96,9 +96,9 @@
                     <div class="card horizontal">
                         <div class="card-image s12 m4">
                             {% if recipe.recipe_image %}
-                                <img class="responsive-img" src="{{ recipe.recipe_image }}">
+                                <img class="responsive-img" src="{{ recipe.recipe_image }}" alt="Image of {{recipe.recipe_name}}">
                             {% else %}
-                                <img class="responsive-img" src="https://images.unsplash.com/photo-1509358271058-acd22cc93898?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="">
+                                <img class="responsive-img" src="https://images.unsplash.com/photo-1509358271058-acd22cc93898?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Image of seasoning and spoons">
                             {% endif %}
                         </div>
                         <div class="card-stacked s12 m7">
@@ -126,9 +126,9 @@
                             <div class="card">
                                 <div class="card-image">
                                     {% if recipe.recipe_image %}
-                                        <img class="responsive-img" src="{{ recipe.recipe_image }}">
+                                        <img class="responsive-img" src="{{ recipe.recipe_image }}" alt="Image of {{recipe.recipe_name}}">
                                     {% else %}
-                                        <img class="responsive-img" src="https://images.unsplash.com/photo-1509358271058-acd22cc93898?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="">
+                                        <img class="responsive-img" src="https://images.unsplash.com/photo-1509358271058-acd22cc93898?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Image of seasoning and spoons">
                                     {% endif %}
                                     <span class="card-title recipe-header">{{ recipe.recipe_name }}
                                     </span>
