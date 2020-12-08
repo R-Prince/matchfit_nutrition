@@ -23,6 +23,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/home")
 def home():
+    """ Retrieve recipes and blogs from db and return on Homepage """
     recipes = list(mongo.db.recipes.find().limit(3).sort("date_created", -1))
     blogs = list(mongo.db.blogs.find().limit(1).sort("date_created", -1))
     return render_template("index.html", recipes=recipes, blogs=blogs)
@@ -30,6 +31,7 @@ def home():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    """ Create username in db and use as session cookie """
     if request.method == "POST":
         # Check if username exists in db
         exisiting_user = mongo.db.users.find_one(
@@ -58,6 +60,7 @@ def register():
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    """ Allow users to log into their profile """
     if request.method == "POST":
         # Check if username exists in db
         exisiting_user = mongo.db.users.find_one(
@@ -83,6 +86,7 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
+    """ Retrieve recipes and blogs from db and return on Profile Page """
     username = mongo.db.users.find_one(
         {"username": session['user']})
     recipes = list(mongo.db.recipes.find().sort("date_created", -1))
@@ -97,7 +101,7 @@ def profile(username):
 
 @app.route("/logout")
 def logout():
-    # Log user out of profile
+    """ Clear session cookie and log user out of profile """
     session.clear()
     flash("Your have successfully logged out")
     return redirect(url_for("login"))
@@ -105,12 +109,14 @@ def logout():
 
 @app.route("/recipes")
 def recipes():
+    """ Retrieve recipes from db and return on Recipe page """
     recipes = list(mongo.db.recipes.find().sort("date_created", -1))
     return render_template("recipes.html", recipes=recipes)
 
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
+    """ Search db for recipes and return response """
     query = request.form.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
     return render_template("recipes.html", recipes=recipes)
@@ -118,6 +124,7 @@ def search():
 
 @app.route("/category", methods=["GET", "POST"])
 def category():
+    """ Search db for recipes based on category and return response """
     category = request.form.get("category")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": category}}))
     return render_template("recipes.html", recipes=recipes)
@@ -125,6 +132,7 @@ def category():
 
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
+    """ Create new recipe in db """
     if request.method == "POST":
         recipe = {
             "recipe_name": request.form.get("recipe_name"),
@@ -147,6 +155,7 @@ def add_recipe():
 
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
+    """ Search for recipe via ObjectId and update user input in db """
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     if request.method == "POST":
         update_recipe = {
@@ -169,6 +178,7 @@ def edit_recipe(recipe_id):
 
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
+    """ Search for recipe via ObjectId and delete in db """
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe Successfullt Deleted")
     return redirect(url_for("recipes"))
@@ -176,6 +186,7 @@ def delete_recipe(recipe_id):
 
 @app.route("/show_recipe/<recipe_id>")
 def show_recipe(recipe_id):
+    """ Search for recipe via ObjectId and return fields from db """
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     return render_template(
         "show_recipe.html", recipe=recipe)
@@ -183,18 +194,21 @@ def show_recipe(recipe_id):
 
 @app.route("/blogs")
 def blogs():
+    """ Retrieve blogs from db and return on Blog page """
     blogs = list(mongo.db.blogs.find().sort("date_created", -1))
     return render_template("blogs.html", blogs=blogs)
 
 
 @app.route("/show_blog/<blog_id>")
 def show_blog(blog_id):
+    """ Search for blog via ObjectId and return fields from db """
     blog = mongo.db.blogs.find_one({"_id": ObjectId(blog_id)})
     return render_template("show_blog.html", blog=blog)
 
 
 @app.route("/add_blog", methods=["GET", "POST"])
 def add_blog():
+    """ Create new blog in db """
     if request.method == "POST":
         blog = {
             "blog_title": request.form.get("blog_title"),
@@ -215,6 +229,7 @@ def add_blog():
 
 @app.route("/delete_blog/<blog_id>")
 def delete_blog(blog_id):
+    """ Search for blog via ObjectId and delete in db """
     mongo.db.blogs.remove({"_id": ObjectId(blog_id)})
     flash("Blog Successfully Deleted")
     return redirect(url_for("blogs"))
@@ -222,6 +237,7 @@ def delete_blog(blog_id):
 
 @app.route("/edit_blog/<blog_id>", methods=["GET", "POST"])
 def edit_blog(blog_id):
+    """ Search for blog via ObjectId and update user input in db """
     blog = mongo.db.blogs.find_one({"_id": ObjectId(blog_id)})
     if request.method == "POST":
         update_blog = {
