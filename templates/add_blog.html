@@ -33,7 +33,7 @@
                     </div>
                     <div class="row">
                         <!--Blog Text-->
-                        <div class="input-field col s12">
+                        <div class="blog_editor input-field col s12">
                             <textarea id="blog_text" type="text" name="blog_text" class="validate" minlength="3"></textarea>
                             <label for="blog_text">Add Blog Text</label>
                         </div>
@@ -48,7 +48,7 @@
                     <!--Add Blog Button-->
                     <div class="row center-align">
                         <a href="{{ url_for('blogs')}}" class="grey-button waves-effect waves-light btn-small">Cancel</a>
-                        <button type="submit" class="waves-effect waves-light btn green-button">Add Blog</button>
+                        <button type="submit" id="blog_submit" class="waves-effect waves-light btn green-button">Add Blog</button>
                     </div>
                 </div>
             </form>
