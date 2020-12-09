@@ -76,3 +76,8 @@ tinymce.init({
   selector: 'textarea#blog_text',
   height: 600
 });
+
+// Image replacement for any broken image links 
+$('img').on("error", function() {
+  $(this).attr('src', 'https://images.unsplash.com/reserve/EnF7DhHROS8OMEp2pCkx_Dufer%20food%20overhead%20hig%20res.jpg?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1514&q=80');
+});
