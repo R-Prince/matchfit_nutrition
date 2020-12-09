@@ -119,15 +119,18 @@ def search():
     """ Search db for recipes and return response """
     query = request.form.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
-    return render_template("recipes.html", recipes=recipes)
+    return render_template("recipes.html", recipes=recipes, query=query)
 
 
 @app.route("/category", methods=["GET", "POST"])
 def category():
     """ Search db for recipes based on category and return response """
     category = request.form.get("category")
-    recipes = list(mongo.db.recipes.find({"$text": {"$search": category}}))
-    return render_template("recipes.html", recipes=recipes)
+    if category:
+        recipes = list(mongo.db.recipes.find({"$text": {"$search": category}}))
+    else:
+        return redirect(url_for("recipes"))
+    return render_template("recipes.html", recipes=recipes, category=category)
 
 
 @app.route("/add_recipe", methods=["GET", "POST"])

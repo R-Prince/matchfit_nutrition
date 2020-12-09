@@ -18,7 +18,7 @@
             <ul class="right hide-on-med-and-down">
                 <li><a href="{{ url_for('home' )}}">Home</a></li>
                 <li><a href="{{ url_for('recipes' )}}">Recipes</a></li>
-                <li><a href="{{ url_for('blogs')}}">Blogs</a></li>
+                <li><a href="{{ url_for('blogs')}}">Blog</a></li>
                 {% if session.user %}
                 <li><a href="{{ url_for('add_recipe')}}">Add Recipe</a></li>
                 <li><a href="{{ url_for( 'profile', username=session['user'] )}}">Profile</a></li>
@@ -35,7 +35,7 @@
             <h4 class="center-align side-nav-logo">MATCH<span>FIT</span><br>NUTRITION</h4>
             <li><a href="{{ url_for('home' )}}">Home</a></li>
             <li><a href="{{ url_for('recipes' )}}">Recipes</a></li>
-            <li><a href="{{ url_for('blogs')}}">Blogs</a></li>
+            <li><a href="{{ url_for('blogs')}}">Blog</a></li>
             {% if session.user %}
             <li><a href="{{ url_for('add_recipe')}}">Add Recipe</a></li>
             <li><a href="{{ url_for( 'profile', username=session['user'] )}}">Profile</a></li>
