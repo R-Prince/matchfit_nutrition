@@ -19,6 +19,9 @@ $(document).ready(function(){
     // Tooltip on floating action buttons
     $('.tooltipped').tooltip();
 
+    // Confirm delete modal
+    $('.modal').modal();
+
     // Validate Add Recipe materialize form (Copied from Code Institute - Materialize Form Validation)
     validateMaterializeSelect();
     function validateMaterializeSelect() {

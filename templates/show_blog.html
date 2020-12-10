@@ -31,9 +31,20 @@
                 </a>
                 <ul>
                     <li><a href="{{ url_for('edit_blog', blog_id=blog._id)}}" class="btn-floating orange darken-3 tooltipped" data-position="left" data-tooltip="Edit blog"><i class="fas fa-edit"></i></a></li>
-                    <li><a href="{{ url_for('delete_blog', blog_id=blog._id)}}" class="btn-floating red darken-2 tooltipped" data-position="left" data-tooltip="Delete blog"><i class="fas fa-trash-alt"></i></a></li>
+                    <li><a href="#delete_blog" class="btn-floating red darken-2 tooltipped modal-trigger" data-position="left" data-tooltip="Delete blog"><i class="fas fa-trash-alt"></i></a></li>
                 </ul>
             </div>
         {% endif %}
+        <!-- Modal Content: Delete Blog -->
+        <div id="delete_blog" class="modal">
+            <div class="modal-content">
+                <h5>Are you sure you want to delete this blog?</h5>
+                <h4 class="modal-header">{{blog.blog_title}}</h4>
+            </div>
+            <div class="modal-buttons">
+                <a href="{{ url_for('delete_blog', blog_id=blog._id)}}" class="waves-effect waves-light btn-small red-button right">Delete</a>
+                <a href="{{ url_for( 'profile', username=session['user'] )}}" class="btn-small waves-effect waves-light btn grey-button right">Cancel</a>
+            </div>
+        </div>
     </div>
 {% endblock %}
