@@ -126,6 +126,7 @@ def search():
 def category():
     """ Search db for recipes based on category and return response """
     category = request.form.get("category")
+    print(category)
     if category:
         recipes = list(mongo.db.recipes.find({"$text": {"$search": category}}))
     else:
