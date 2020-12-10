@@ -1,45 +1,57 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+# MatchFit Nutrition
 
-Welcome R-Prince,
+An online cookbook that allows users to share and easily access recipes that will help to fuel their training sessions and matches. Like the name suggests MatchFit Nutrition will provide tried and tested recipes for athletes that are easy to follow and hopefully taste delicious. This website also features tips on nutrition from some of the worlds leading sport nutritionists to inspire athletes and increase the importance of nutrition and how it can improve performance. 
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+Whether the user is an amateur, semi-professional or professional athlete they will be able to share their recipes with the community and access recipes with the goal of ultimately helping to improve nutrition and performance. Expert advice from top sport nutritionists will also be presented to the user in the form of blogs to help improve nutrition no matter the level they are playing at. 
 
-## Gitpod Reminders
+[MatchFit Nutrition](https://matchfit-nutrition.herokuapp.com/)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+Business goals: 
+- Provide recipe and tips to help improve athlete nutrition and performance.
+- Promote awareness and importance of nutrition in sport.
+- Promote awareness of selected sport nutritionists.
 
-`python3 -m http.server`
+User goals:
+- Easily find recipes to help improve nutrition and performance.
+- Share recipes to help other athletes improve nutrition and performance.
+- Find more information on nutrition and how it can improve performance. 
 
-A blue button should appear to click: *Make Public*,
+# UX
+## Ideal Client
 
-Another blue button should appear to click: *Open Browser*.
+The ideal client for this business is: 
+- Someone who plays sport.
+- Over 16 years old.
+- Interested in cooking. 
+- Interested in sport nutrition. 
+- Interested in health and fitness.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Visitors to this website are searching for: 
+- Healthy recipes that are great for athletes.
+- Breakfast, Lunch and Dinner options. 
+- Nutrition tips that will help improve performance.
+- Platform to easily share recipes. 
 
-A blue button should appear to click: *Make Public*,
+This website helps users achieve this goal by:
+- Providing easy to follow recipes for athletes. 
+- Search function so users are able to easily search for recipes. 
+- Blog posts from sport nutritionists. 
+- Easy fillable forms so users can share recipes. 
 
-Another blue button should appear to click: *Open Browser*.
+## Clients stories
+1. As a new visitor to the website or registered user, I want to easily be able to view recipes. 
+2. As a new visitor to the website or registered user, I want to be able to view ingredients and instructions that are clear and easy to follow.
+3. As a new visitor to the website or registered user, I want to easily view tips on sports nutrition. 
+4. As a new visitor to the website , I want to easily sign up to the site and share recipes. 
+5. As a new visitor to the website or registered user, I want to easily search for new recipes. 
+6. As a registered user, I want to easily add recipes to the site.
+7. As a registered user, I want to easily edit and delete recipes I have shared. 
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## Wireframes
+These wirerames were created using [Balsamiq](https://balsamiq.com/) during the planning process for the project and includes wireframes for desktop, tablets and mobile devices.
 
-## Updates Since The Instructional Video
+[MatchFit Nutrition Wireframes](/readme/wireframes/MatchFitWireframes.pdf)
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+# Features
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
---------
-
-Happy coding!
