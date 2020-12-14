@@ -277,5 +277,57 @@ Flash messages are used to add responses to user input and make them aware or co
 5. Like Button - Add a like button to the recipe and blog cards which allow users to rate the recipe or blog. 
 6. Search for recipes via username - This would help to promote certain usernames. Users may also like a certain recipe method/style by a user which would make it easier for them to find  the recipes.   
 
+# Information Architecture
 
+MongoDB Atlas database was used this for this project which is a NoSQL database.
 
+### Data Storage Types
+
+- ObjectId
+- String
+- DateTime
+- Array
+- Integer
+
+### Collections Data Structure
+
+This website relies on three database collections: 
+
+#### Blogs 
+
+| Title | Key in DB | Form Validation Type | Data Type |
+| ------|-----------| ---------------------| ----------|
+| Blog ID| _id| None| ObjectId|
+| Blog Title| blog_title| minlength="3"| String|
+| Blog Description| blog_description | minlength="3"| String|
+| Blog Image| blog_image| None| String|
+| Blog Time| blog_time | Number | Integer|
+| Blog Author | blog_author| None| String|
+| Blog Text| blog_text| minlength="3"| String|
+| Date Created | date_created | None| Date|
+
+#### Recipes
+
+| Title | Key in DB | Form Validation Type | Data Type |
+| ------|-----------| ---------------------| ----------|
+| Recipe ID| _id| None| ObjectId|
+| Recipe Name| recipe_name|minlength="3"| String|
+| Recipe Description | recipe_description | minlength="3"| String|
+| Recipe Time | recipe_time| Number | Int32|
+| Recipe Difficulty| recipe_difficulty| Dropdown selection | String|
+| Recipe Category| category| Dropdown selection | String|
+| Recipe Ingredients| recipe_ingredients| minlength="3"| Array|
+| Recipe Method| recipe_method| minlength="3"| Array|
+| Recipe Image| recipe_image| None| String|
+| Date Created | date_created | None| Date|
+| Created By | created_by | None| String |
+
+#### Users
+
+| Title | Key in DB | Form Validation Type | Data Type |
+| ------|-----------| ---------------------| ----------|
+| User ID| _id| None| ObjectId|
+| First Name | first_name | None| String |
+| Last Name | last_name | None| String |
+| Username | username | minlength="5" maxlength="15"| String |
+| Password | password | minlength="5" maxlength="15"| String |
