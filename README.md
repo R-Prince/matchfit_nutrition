@@ -298,12 +298,12 @@ This website relies on three database collections:
 | Title | Key in DB | Form Validation Type | Data Type |
 | ------|-----------| ---------------------| ----------|
 | Blog ID| _id| None| ObjectId|
-| Blog Title| blog_title| minlength="3"| String|
-| Blog Description| blog_description | minlength="3"| String|
-| Blog Image| blog_image| None| String|
-| Blog Time| blog_time | Number | Integer|
-| Blog Author | blog_author| None| String|
-| Blog Text| blog_text| minlength="3"| String|
+| Blog Title| blog_title| minlength="3", text| String|
+| Blog Description| blog_description | minlength="3", text| String|
+| Blog Image| blog_image| text | String|
+| Blog Time| blog_time | number | Integer|
+| Blog Author | blog_author| text| String|
+| Blog Text| blog_text| minlength="3", text| String|
 | Date Created | date_created | None| Date|
 
 #### Recipes
@@ -311,23 +311,23 @@ This website relies on three database collections:
 | Title | Key in DB | Form Validation Type | Data Type |
 | ------|-----------| ---------------------| ----------|
 | Recipe ID| _id| None| ObjectId|
-| Recipe Name| recipe_name|minlength="3"| String|
-| Recipe Description | recipe_description | minlength="3"| String|
-| Recipe Time | recipe_time| Number | Int32|
-| Recipe Difficulty| recipe_difficulty| Dropdown selection | String|
-| Recipe Category| category| Dropdown selection | String|
-| Recipe Ingredients| recipe_ingredients| minlength="3"| Array|
-| Recipe Method| recipe_method| minlength="3"| Array|
-| Recipe Image| recipe_image| None| String|
+| Recipe Name| recipe_name|minlength="3", text| String|
+| Recipe Description | recipe_description | minlength="3", text| String|
+| Recipe Time | recipe_time| number | Int32|
+| Recipe Difficulty| recipe_difficulty| Dropdown selection, text | String|
+| Recipe Category| category| Dropdown selection, text | String|
+| Recipe Ingredients| recipe_ingredients| minlength="3", text| Array|
+| Recipe Method| recipe_method| minlength="3", text| Array|
+| Recipe Image| recipe_image| text | String|
 | Date Created | date_created | None| Date|
-| Created By | created_by | None| String |
+| Created By | created_by | None | String |
 
 #### Users
 
 | Title | Key in DB | Form Validation Type | Data Type |
 | ------|-----------| ---------------------| ----------|
 | User ID| _id| None| ObjectId|
-| First Name | first_name | None| String |
-| Last Name | last_name | None| String |
-| Username | username | minlength="5" maxlength="15"| String |
-| Password | password | minlength="5" maxlength="15"| String |
+| First Name | first_name | text| String |
+| Last Name | last_name | text | String |
+| Username | username | minlength="5" maxlength="15", text| String |
+| Password | password | minlength="5" maxlength="15", text | String |
