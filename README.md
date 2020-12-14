@@ -403,3 +403,19 @@ To deploy this project to Heroku, please use the following steps:
 
 8. Back on the dashboard, click on “Deploy” and ensure the “master” branch is selected. You can then go ahead and click on the “Deploy Branch”. 
 
+# Credits
+
+### Content
+- The text used for the recipes were copied from …
+- The text used for the blogs were copied from ….
+
+### Media
+- All images for the site were obtained from [Unsplash](https://unsplash.com/).
+
+### Acknowledgements
+- I received inspiration for this project from a number of different websites:
+    - [FourFourTwo](https://www.fourfourtwo.com/performance)
+    - [Tasty](https://tasty.co/)
+    - [BBC Recipes](https://www.bbc.co.uk/food/recipes)
+    - [MatchFit](https://www.matchfitconditioning.com/)
+
