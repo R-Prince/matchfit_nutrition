@@ -331,3 +331,75 @@ This website relies on three database collections:
 | Last Name | last_name | text | String |
 | Username | username | minlength="5" maxlength="15", text| String |
 | Password | password | minlength="5" maxlength="15", text | String |
+
+# Technologies Used 
+
+### Tools 
+
+- [Gitpod](https://www.gitpod.io/) - IDE used to develop this project.
+- [Github](https://github.com/) - Store and share all project code remotely.
+- [PIP](https://pypi.org/project/pip/) - Used to install tools needed for this project.
+- [MongoDB](https://www.mongodb.com/1) - Database used for this project.
+- [TinyMCE](https://www.tiny.cloud/)  - Used to create the rich-text editor when creating a blog.
+
+### Libraries 
+
+- [JQuery](https://jquery.com/) - Used for DOM manipulation. 
+- [Jasmine](https://jasmine.github.io/)  - Used to run automated tests on Javascript code.
+- [Materialize](https://materializecss.com/) - Used to create the structure and UI for the website and make the website responsive.
+- [Font Awesome](https://fontawesome.com/) - Used to provide icons for the website. 
+- [Google Fonts](https://fonts.google.com/) - Used to style the website fonts. 
+- [Pymongo](https://pymongo.readthedocs.io/en/stable/) - Used to communicate between Python and MongoDB.
+- [Flask](https://flask.palletsprojects.com/en/1.1.x/)  - Used to construct and render pages. 
+- [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) - Used to display data from the backend effectively in the frontend html. 
+
+### Languages
+This project uses HTML, CSS, Javascript and Python to programme the website. 
+
+# Testing 
+
+# Deployment 
+
+###  How to run this project locally
+
+You must have the following tools installed to run this project:
+
+- An IDE such as Gitpod
+- Git
+- PIP
+- Python 3
+- MongoD Atlas account 
+
+#### Instructions
+
+1. Follow this link to the [MatchFit Nutrition](https://github.com/R-Prince/matchfit_nutrition) repository.
+2. Select the green button which has the options to "clone or download".
+3. Copy the "Clone with HTTPS" link.
+4. Switch the current working directory to the location where you want to clone the repository.
+5. Use command "git clone" followed by pasting the "Clone with HTTPS" link.
+6. Install requirements needed for this project using the command “pip -r requirements.txt”.
+7. You will then need to create a env file to create a secret_key and a mongo_uri to link your MongoDB database. Within your database you’ll need to create three collections Blogs, Recipes and Users. Please see “Information Architecture” section for more information the key values created. 
+8. Finally you can run now run the application with the command “python3 app.py”.
+
+# Heroku Deployment
+
+To deploy this project to Heroku, please use the following steps:
+
+1. Ensure you have an updated requirements.txt file. If you do not have this file you can create one using the following command “pip freeze > requirements.txt”.
+2. Create a Procfile using the command “echo web: python app.py > Procfile”
+3. Add and commit the new Requirements and Procfile and push the latest application GitHub. 
+4. Create a new app on the Heroku website. 
+5. Once on the dashboard for your new Heroku app click on “Deploy” then “Deployment Method” and click GitHub.
+6. Select the correct project to and link the heroku app with the GitHub repository. 
+7. Back on the dashboard select “Settings” and click on “Reveal Config Vars” and add the following info:
+
+    | Key | Value |
+    | ---|---|
+    | DEBUG|False|
+    | IP|0.0.0.0|
+    | PORT|5000|
+    | SECRET_KEY|Add your secret key here|
+    | MONGO_URI|Add your mongo uri here|
+
+8. Back on the dashboard, click on “Deploy” and ensure the “master” branch is selected. You can then go ahead and click on the “Deploy Branch”. 
+
