@@ -15,7 +15,7 @@
                     <div class="row">
                         <!--Recipe Description-->
                         <div class="input-field col s12">
-                            <textarea id="recipe_description" type="text" name="recipe_description" class="validate materialize-textarea" required>{{ recipe.recipe_description}}</textarea>
+                            <textarea id="recipe_description" name="recipe_description" class="validate materialize-textarea" required>{{ recipe.recipe_description}}</textarea>
                             <label for="recipe_description">Brief Recipe Description</label>
                         </div>
                     </div>
@@ -23,7 +23,7 @@
                         <!--Recipe category-->
                         <div class="input-field col s12 m6">
                             <select id="recipe_category" name="recipe_category" class="validate" required>
-                                <option  size="3" selected>{{recipe.category.title()}}</option>
+                                <option  size="4" selected>{{recipe.category.title()}}</option>
                                 <option value="breakfast">Breakfast</option>
                                 <option value="lunch">Lunch</option>
                                 <option value="dinner">Dinner</option>
@@ -35,7 +35,7 @@
                         <!--Recipe difficulty-->
                         <div class="input-field col s12 m6">
                             <select id="recipe_difficulty" name="recipe_difficulty" class="validate" required>
-                                <option size="3" selected>{{recipe.recipe_difficulty.title()}}</option>
+                                <option size="4" selected>{{recipe.recipe_difficulty.title()}}</option>
                                 <option value="easy">Easy</option>
                                 <option value="moderate">Moderate</option>
                                 <option value="difficult">Difficult</option>
@@ -52,8 +52,8 @@
                         {% for ingredient in recipe.recipe_ingredients%}
                             <!--Recipe Ingredients-->
                             <div class="input-field col s12 m6">
-                                <input type="text" name="recipe_ingredient[]" class="validate materialize-textarea" minlength="3" required value="{{ingredient}}">
-                                <label for="recipe_ingredients">Recipe Ingredient</label>
+                                <input type="text" name="recipe_ingredient[]" class="validate materialize-textarea" id="ingredient{{[loop.index]}}" minlength="3" required value="{{ingredient}}">
+                                <label for="ingredient{{[loop.index]}}">Recipe Ingredient</label>
                                 <!--Delete ingredient field-->
                                 <i class="delete_ingredient fas fa-trash-alt delete-button"></i>
                             </div>
@@ -67,8 +67,8 @@
                         {% for method in recipe.recipe_method%}
                             <!--Recipe Method-->
                             <div class="input-field col s12">
-                                <textarea name="recipe_method[]" class="validate materialize-textarea" minlength="3" required>{{ method}}</textarea>
-                                <label for="recipe_method">Recipe Method</label>
+                                <textarea name="recipe_method[]" id="method{{[loop.index]}}" class="validate materialize-textarea" minlength="3" required>{{ method}}</textarea>
+                                <label for="method{{[loop.index]}}">Recipe Method</label>
                                 <!--Delete ingredient field-->
                                 <i class="delete_method fas fa-trash-alt delete-button"></i>
                             </div>
@@ -81,7 +81,7 @@
                     <div class="row">
                         <!--Recipe Image-->
                         <div class="input-field col s12">
-                            <textarea id="recipe_image" type="text" name="recipe_image" class="validate materialize-textarea">{{ recipe.recipe_image}}</textarea>
+                            <textarea id="recipe_image" name="recipe_image" class="validate materialize-textarea">{{ recipe.recipe_image}}</textarea>
                             <label for="recipe_image">Add Image Link</label>
                         </div>
                     </div>

@@ -54,7 +54,7 @@ $(document).ready(function(){
 
 // Function to add another ingredient to add recipe form
 $("#add_ingredient").click(function(){
-    ingredient = "<div class='input-field col s12 m6'><input type='text' name='recipe_ingredient[]' class='validate materialize-textarea' minlength='3' required><label for='recipe_ingredient'>Ingredient</label><i class='delete_ingredient fas fa-trash-alt delete-button'></i></div>"
+    ingredient = "<div class='input-field col s12 m6'><input type='text' name='recipe_ingredient[]' id='ingredient' class='validate materialize-textarea' minlength='3' required><label for='ingredient'>Ingredient</label><i class='delete_ingredient fas fa-trash-alt delete-button'></i></div>"
     $("#recipe_ingredient_field").append(ingredient)
 })
 
@@ -65,7 +65,7 @@ $("#recipe_ingredient_field").on("click", ".delete_ingredient", function(){
 
 // Function to add another method to add recipe form
 $("#add_method").click(function(){
-    method = "<div class='input-field col s12'><textarea name='recipe_method[]' class='validate materialize-textarea' minlength='3' required></textarea><label for='recipe_method'>Next Step</label><i class=' delete_method fas fa-trash-alt delete-button'></i></div>"
+    method = "<div class='input-field col s12'><textarea name='recipe_method[]' id='method' class='validate materialize-textarea' minlength='3' required></textarea><label for='method'>Next Step</label><i class=' delete_method fas fa-trash-alt delete-button'></i></div>"
     $("#recipe_method_field").append(method)
 })
 
