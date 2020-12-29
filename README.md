@@ -4,6 +4,8 @@ An online cookbook that allows users to share and easily access recipes that wil
 
 Whether the user is an amateur, semi-professional or professional athlete they will be able to share their recipes with the community and access recipes with the goal of ultimately helping to improve nutrition and performance. Expert advice from top sport nutritionists will also be presented to the user in the form of blogs to help improve nutrition no matter the level they are playing at. 
 
+![preview](/readme/images/preview.png)
+
 [MatchFit Nutrition](https://matchfit-nutrition.herokuapp.com/)
 
 Business goals: 
@@ -15,6 +17,17 @@ User goals:
 - Easily find recipes to help improve nutrition and performance.
 - Share recipes to help other athletes improve nutrition and performance.
 - Find more information on nutrition and how it can improve performance. 
+
+# Table of Contents
+1. [UX](#UX)
+2. [Features](#Features)
+3. [Features Left to Implement](#FeatureslefttoImplement)
+4. [Information Architecture](#InformationArchitecture)
+5. [Technologies Used](#TechnologiesUsed)
+6. [Testing](#Testing)
+7. [Deployment](#Deployment)
+8. [Heroku Deployment](#HerokuDeployment)
+9. [Credits](#Credits)
 
 # UX
 
@@ -406,8 +419,8 @@ To deploy this project to Heroku, please use the following steps:
 # Credits
 
 ### Content
-- The text used for the recipes were copied from …
-- The text used for the blogs were copied from ….
+- The text used for the recipes were copied from [Mens Health](https://www.menshealth.com/), [Beauty Bites](https://www.beautybites.org/), [Jamie Oliver](https://www.jamieoliver.com/) and [Taste of Home]( https://www.tasteofhome.com/).
+- The text used for the blogs were copied from [MaxiMuscle]( https://www.maximuscle.com/) and [MyProtein](https://www.myprotein.com/).
 
 ### Media
 - All images for the site were obtained from [Unsplash](https://unsplash.com/).
