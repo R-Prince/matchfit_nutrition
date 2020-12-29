@@ -21,12 +21,12 @@ User goals:
 # Table of Contents
 1. [UX](#UX)
 2. [Features](#Features)
-3. [Features Left to Implement](#FeatureslefttoImplement)
-4. [Information Architecture](#InformationArchitecture)
-5. [Technologies Used](#TechnologiesUsed)
+3. [Features Left to Implement](#Features-left-to-Implement)
+4. [Information Architecture](#Information-Architecture)
+5. [Technologies Used](#Technologies-Used)
 6. [Testing](#Testing)
 7. [Deployment](#Deployment)
-8. [Heroku Deployment](#HerokuDeployment)
+8. [Heroku Deployment](#Heroku-Deployment)
 9. [Credits](#Credits)
 
 # UX
