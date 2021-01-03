@@ -371,6 +371,8 @@ This project uses HTML, CSS, Javascript and Python to programme the website.
 
 # Testing 
 
+Testing information can be found in a seperate [Testing](readme/testing/testing.md) file.
+
 # Deployment 
 
 ###  How to run this project locally
