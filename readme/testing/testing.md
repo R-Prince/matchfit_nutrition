@@ -1,18 +1,18 @@
 # Testing
 
-Back to [README](README.md) file.
+Back to [README](/README.md) file.
 
 [MatchFit Nutrition](https://matchfit-nutrition.herokuapp.com/)
 
 ## Table of Contents
 
-1. [Automated Testing](###Automated-Testing)
-2. [User Stories Testing](###User-Stories-Testing)
-3. [Manual Testing](###Manual-Testing)
-4. [Further Testing](###Further-Testing)
+1. [Automated Testing](#Automated-Testing)
+2. [User Stories Testing](#User-Stories-Testing)
+3. [Manual Testing](#Manual-Testing)
+4. [Further Testing](#Further-Testing)
 
 
-### Automated Testing 
+# Automated Testing 
 
 - [W3C Markup Validation](https://validator.w3.org/) was used to validate HTML. Please see below main errors:
     - The first child option element of a select element with a required attribute, and without a multiple attribute, and without a size attribute whose value is greater than 1, must have either an empty value attribute, or must have no text content.
@@ -21,7 +21,7 @@ Back to [README](README.md) file.
 - [JSHint](https://jshint.com/) was used to validate the Javascript. Please see below main errors:
     - 11 warning which mostly consisted of missing semi-colons.
 
-### User Stories Testing 
+# User Stories Testing 
 
 #### Client Stories
 
@@ -56,7 +56,7 @@ The following section goes through the user stories from the UX section of the r
     3. The edit button redirects users to the form in which they used to create the recipe. All the information inputted is relayed in the inout field which they are then able to edit and submit the updated changes to the database. 
     4. The delete button will delete the recipe selected but will first pop up a modal page confirming they want to delete the recipe to avoid accidentally deletion. 
 
-### Manual Testing 
+# Manual Testing 
 
 #### Navigation bar (Jinja permissions and links)
 - Links when user is logged in:
@@ -285,7 +285,7 @@ The following section goes through the user stories from the UX section of the r
 - Confirm call to action button redirects users back to the blog page. 
 - Confirm on mobile and tablet devices the blog is being displayed correctly and easy to read.
 
-### Further Testing 
+# Further Testing 
 
 - Asked friends and family to test website on their own devices and report any errors.
 - I viewed my website on several devices to check for any errors.
