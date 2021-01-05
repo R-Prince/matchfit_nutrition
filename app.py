@@ -20,12 +20,21 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+def date_format(dates):
+    """ Covert datetime format into string so the date is easier to read """
+    for date in dates:
+        date["date_created"] = date["date_created"].strftime("%b %d %Y")
+    return dates
+
+
 @app.route("/")
 @app.route("/home")
 def home():
     """ Retrieve recipes and blogs from db and return on Homepage """
     recipes = list(mongo.db.recipes.find().limit(3).sort("date_created", -1))
+    date_format(recipes)
     blogs = list(mongo.db.blogs.find().limit(1).sort("date_created", -1))
+    date_format(blogs)
     return render_template("index.html", recipes=recipes, blogs=blogs)
 
 
@@ -112,6 +121,7 @@ def logout():
 def recipes():
     """ Retrieve recipes from db and return on Recipe page """
     recipes = list(mongo.db.recipes.find().sort("date_created", -1))
+    date_format(recipes)
     return render_template("recipes.html", recipes=recipes)
 
 
@@ -127,7 +137,6 @@ def search():
 def category():
     """ Search db for recipes based on category and return response """
     category = request.form.get("category")
-    print(category)
     if category:
         recipes = list(mongo.db.recipes.find({"$text": {"$search": category}}))
     else:
@@ -193,6 +202,7 @@ def delete_recipe(recipe_id):
 def show_recipe(recipe_id):
     """ Search for recipe via ObjectId and return fields from db """
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    recipe["date_created"] = recipe["date_created"].strftime("%b %d %Y")
     return render_template(
         "show_recipe.html", recipe=recipe)
 
@@ -201,6 +211,7 @@ def show_recipe(recipe_id):
 def blogs():
     """ Retrieve blogs from db and return on Blog page """
     blogs = list(mongo.db.blogs.find().sort("date_created", -1))
+    date_format(blogs)
     return render_template("blogs.html", blogs=blogs)
 
 
@@ -208,6 +219,7 @@ def blogs():
 def show_blog(blog_id):
     """ Search for blog via ObjectId and return fields from db """
     blog = mongo.db.blogs.find_one({"_id": ObjectId(blog_id)})
+    blog["date_created"] = blog["date_created"].strftime("%b %d %Y")
     return render_template("show_blog.html", blog=blog)
 
 

@@ -349,7 +349,7 @@ footer a{
 }
 
 .recipe-box{
-    height: auto;
+    height: 100vh;
 }
 
 .ingredient{
