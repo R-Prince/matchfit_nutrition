@@ -20,6 +20,11 @@ Back to [README](/README.md) file.
 - [W3C CSS Validation](https://jigsaw.w3.org/css-validator/) was used to validate CSS.
 - [JSHint](https://jshint.com/) was used to validate the Javascript. Please see below main errors:
     - 11 warning which mostly consisted of missing semi-colons.
+- [Python Unittest](https://docs.python.org/3/library/unittest.html) was used to test the date_format function in the app.py file. 
+    - To run the test:    
+        1. Open [test_app.py](/test_app.py) file.
+        2. In the terminal command line type "python -m unittest test_app".
+        3. If all the test passed you'll simply see ".." with the status of "OK" in the command line.
 
 # User Stories Testing 
 

@@ -21,7 +21,8 @@ mongo = PyMongo(app)
 
 
 def date_format(dates):
-    """ Covert datetime format into string so the date is easier to read """
+    """ Covert datetime format in db into string
+    so the date is easier to read """
     for date in dates:
         date["date_created"] = date["date_created"].strftime("%b %d %Y")
     return dates
