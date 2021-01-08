@@ -99,6 +99,9 @@
                 </div>
             </div>
         {% endfor %}
+        <div class="center-align link-container">
+            <a href="{{ url_for('recipes' )}}" class="waves-effect waves-light btn orange-button">View more recipes</a>
+        </div>
     </div>
     <!--About Section-->
     <div class="row about-container">
@@ -174,5 +177,8 @@
                 </div>
             </div>
         {% endfor %}
+        <div class="center-align link-container">
+            <a href="{{ url_for('blogs' )}}" class="waves-effect waves-light btn orange-button">View more blogs</a>
+        </div>
     </div>
 {% endblock %}
