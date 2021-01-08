@@ -23,11 +23,11 @@ mongo = PyMongo(app)
 def change_date_format(list_data):
     """ Covert datetime format in db into string
     so the date is easier to read """
-    modified_date = []
+    modified_dates = []
     for date in list_data:
         date["date_created"] = date["date_created"].strftime("%b %d %Y")
-        modified_date.append(date)
-    return modified_date
+        modified_dates.append(date)
+    return modified_dates
 
 
 @app.route("/")
