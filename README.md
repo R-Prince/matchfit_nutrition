@@ -232,9 +232,10 @@ The profile page is used to display the users information including Username, Fi
 After the page header “MatchFit Nutrition Member” a card is displayed below aligned to the left hand side which details the username, first and last name. The footer of the card also includes three buttons:
 1. Logout
 2. Add Recipe 
-3. Add blog (only displayed on the admin profile page)
+3. Add blog (only displayed on the usernames that include "matchfit")
 
-If the admin user is logged in then a blog post section will displayed showing cards with all the different blogs available on the site. Each blog card is displayed in same way which is used throughout the website. However there is also two call to action buttons in the footer “Edit” and “Delete” which allows the user to either delete or edit the blog. 
+Only users that have "matchfit" in their username will be abled to access the options to adding and editing blog posts. This was implemented with the idea of only giving access to employees and carefully selected memembers. 
+If a user with matchfit in their username is logged in then a blog post section will displayed showing cards with all the different blogs available on the site. Each blog card is displayed in same way which is used throughout the website. However there is also two call to action buttons in the footer “Edit” and “Delete” which allows the user to either delete or edit the blog. 
 
 Directly underneath the blog section if the “admin” user or below the profile card the recipe selection is displayed which displays all the recipes that the user has created on the site. Each recipe card is displayed in the same way as the cards throughout the site. However there is also two call to action buttons in the footer “Edit” and “Delete” which allows the user to either delete or edit the recipe. 
 
@@ -392,9 +393,10 @@ You must have the following tools installed to run this project:
 3. Copy the "Clone with HTTPS" link.
 4. Switch the current working directory to the location where you want to clone the repository.
 5. Use command "git clone" followed by pasting the "Clone with HTTPS" link.
-6. Install requirements needed for this project using the command “pip -r requirements.txt”.
-7. You will then need to create a env file to create a secret_key and a mongo_uri to link your MongoDB database. Within your database you’ll need to create three collections Blogs, Recipes and Users. Please see “Information Architecture” section for more information the key values created. 
-8. Finally you can run now run the application with the command “python3 app.py”.
+6. Create and activate a virtual environment.
+7. Install requirements needed for this project using the command “pip -r requirements.txt”.
+8. You will then need to create a env file to create a secret_key and a mongo_uri to link your MongoDB database. Within your database you’ll need to create three collections Blogs, Recipes and Users. Please see “Information Architecture” section for more information the key values created. 
+9. Finally you can run now run the application with the command “python3 app.py”.
 
 # Heroku Deployment
 

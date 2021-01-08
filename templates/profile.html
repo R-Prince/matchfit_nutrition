@@ -15,7 +15,7 @@
                             <div class="row">
                             <a class="waves-effect waves-green btn green-button" href="{{ url_for('logout')}}">LogOut</a>
                             <a class="waves-effect waves-green btn grey-button" href="{{ url_for('add_recipe')}}">Add Recipe</a>
-                            {% if session.user|lower == "admin" %}
+                            {% if "matchfit" in session.user|lower  %}
                             <a class="waves-effect waves-green btn orange-button" href="{{ url_for('add_blog')}}">Add Blog</a>
                             {% endif %}
                             </div>
@@ -24,7 +24,7 @@
                 </div>
             </div>
         </div>
-        {% if session.user|lower == "admin" %}
+        {% if "matchfit" in session.user|lower  %}
             <h3 class="page-header">Blog Posts</h3>
             <div class="row">
                 {% for blog in blogs %}
