@@ -234,7 +234,6 @@ def add_blog():
             "blog_image": request.form.get("blog_image"),
             "blog_time": int(request.form.get("blog_time")),
             "blog_author": request.form.get("blog_author"),
-            "blog_date": request.form.get("blog_date"),
             "blog_text": request.form.get("blog_text"),
             "date_created": datetime.today()
         }
@@ -264,7 +263,6 @@ def edit_blog(blog_id):
             "blog_image": request.form.get("blog_image"),
             "blog_time": int(request.form.get("blog_time")),
             "blog_author": request.form.get("blog_author"),
-            "blog_date": request.form.get("blog_date"),
             "blog_text": request.form.get("blog_text"),
             "date_created": datetime.today()
         }
