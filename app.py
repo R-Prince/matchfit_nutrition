@@ -20,12 +20,14 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-def date_format(dates):
+def change_date_format(list_data):
     """ Covert datetime format in db into string
     so the date is easier to read """
-    for date in dates:
+    modified_date = []
+    for date in list_data:
         date["date_created"] = date["date_created"].strftime("%b %d %Y")
-    return dates
+        modified_date.append(date)
+    return modified_date
 
 
 @app.route("/")
@@ -33,10 +35,11 @@ def date_format(dates):
 def home():
     """ Retrieve recipes and blogs from db and return on Homepage """
     recipes = list(mongo.db.recipes.find().limit(3).sort("date_created", -1))
-    date_format(recipes)
+    edited_recipes = change_date_format(recipes)
     blogs = list(mongo.db.blogs.find().limit(1).sort("date_created", -1))
-    date_format(blogs)
-    return render_template("index.html", recipes=recipes, blogs=blogs)
+    edited_blogs = change_date_format(blogs)
+    return render_template(
+        "index.html", recipes=edited_recipes, blogs=edited_blogs)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -122,8 +125,8 @@ def logout():
 def recipes():
     """ Retrieve recipes from db and return on Recipe page """
     recipes = list(mongo.db.recipes.find().sort("date_created", -1))
-    date_format(recipes)
-    return render_template("recipes.html", recipes=recipes)
+    edited_recipes = change_date_format(recipes)
+    return render_template("recipes.html", recipes=edited_recipes)
 
 
 @app.route("/search", methods=["GET", "POST"])
@@ -212,8 +215,8 @@ def show_recipe(recipe_id):
 def blogs():
     """ Retrieve blogs from db and return on Blog page """
     blogs = list(mongo.db.blogs.find().sort("date_created", -1))
-    date_format(blogs)
-    return render_template("blogs.html", blogs=blogs)
+    edited_blogs = change_date_format(blogs)
+    return render_template("blogs.html", blogs=edited_blogs)
 
 
 @app.route("/show_blog/<blog_id>")
