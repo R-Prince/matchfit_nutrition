@@ -363,7 +363,6 @@ This website relies on three database collections:
 ### Libraries 
 
 - [JQuery](https://jquery.com/) - Used for DOM manipulation. 
-- [Jasmine](https://jasmine.github.io/)  - Used to run automated tests on Javascript code.
 - [Materialize](https://materializecss.com/) - Used to create the structure and UI for the website and make the website responsive.
 - [Font Awesome](https://fontawesome.com/) - Used to provide icons for the website. 
 - [Google Fonts](https://fonts.google.com/) - Used to style the website fonts. 
@@ -397,10 +396,11 @@ You must have the following tools installed to run this project:
 3. Copy the "Clone with HTTPS" link.
 4. Switch the current working directory to the location where you want to clone the repository.
 5. Use command "git clone" followed by pasting the "Clone with HTTPS" link.
-6. Create and activate a virtual environment.
+6. Create and activate a virtual python environment.
 7. Install requirements needed for this project using the command “pip -r requirements.txt”.
-8. You will then need to create a env file to create a secret_key and a mongo_uri to link your MongoDB database. Within your database you’ll need to create three collections Blogs, Recipes and Users. Please see “Information Architecture” section for more information the key values created. 
-9. Finally you can run now run the application with the command “python3 app.py”.
+8. You will then need to create a env file to create a secret_key and a mongo_uri to link your MongoDB database. Please see [Env sample file](readme/sample_env.txt) for a sample env file. Remember not to upload this file to your repository.
+9. Within your database you’ll need to create three collections Blogs, Recipes and Users. Please see “Information Architecture” section for more information the key values created. 
+10. Finally you can run now run the application with the command “python3 app.py”.
 
 # Heroku Deployment
 
