@@ -2,16 +2,8 @@ $(document).ready(function(){
     // Mobile Navbar
     $('.sidenav').sidenav();
 
-    // Add Recipes - Select difficulty
+    // Add Recipes - Select difficulty/category
     $('select').formSelect();
-
-    // Date Picker for blog form
-    $('.datepicker').datepicker({
-        showClearBtn: true,
-        i18n: {
-            done: "Select"
-        }
-    });
     
     // Floating action button
     $('.fixed-action-btn').floatingActionButton();
@@ -22,8 +14,6 @@ $(document).ready(function(){
     // Confirm delete modal
     $('.modal').modal();
 
-    validateMaterializeSelect();
-    // Validate Add Recipe materialize form (Copied from Code Institute - Materialize Form Validation)
     function validateMaterializeSelect() {
         var classValid = { "border-bottom": "1px solid #4caf50", "box-shadow": "0 1px 0 0 #4caf50" };
         var classInvalid = { "border-bottom": "1px solid #f44336", "box-shadow": "0 1px 0 0 #f44336" };
@@ -50,6 +40,9 @@ $(document).ready(function(){
             }
         });
     }
+
+    validateMaterializeSelect();
+    // Validate Add Recipe materialize form (Copied from Code Institute - Materialize Form Validation)
 });
 
 // Function to add another ingredient to add recipe form
