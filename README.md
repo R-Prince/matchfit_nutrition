@@ -303,6 +303,10 @@ MongoDB Atlas database was used this for this project which is a NoSQL database.
 - Array
 - Integer
 
+### ERD Diagram
+
+![erd_diagram](/readme/images/erd_diagram.png)
+
 ### Collections Data Structure
 
 This website relies on three database collections: 
