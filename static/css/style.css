@@ -103,6 +103,11 @@
     padding: 0px;
 }
 
+select {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+}
+
 /* Navbar */
 .nav-logo{
     font-family: 'Big Shoulders Stencil Display', cursive;
